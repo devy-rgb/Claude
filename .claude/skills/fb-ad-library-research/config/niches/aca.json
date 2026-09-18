@@ -1,0 +1,853 @@
+{
+  "niche": "aca",
+  "label": "ACA / Affordable Care Act health insurance — pay-per-call",
+  "country": "US",
+  "source_sheet": null,
+  "note": "Built 2026-09-12 from your ask: ACA / Affordable Care Act ads that push a phone call (pay-per-call), plus a look at the advertiser pages behind them. No source sheet yet — keywords below are a first pass; move the winners into a sheet when one exists.",
+  "keywords": {
+    "core": [
+      "affordable care act",
+      "obamacare",
+      "ACA plan",
+      "ACA plans",
+      "ACA health insurance",
+      "ACA subsidy",
+      "health insurance subsidy",
+      "$0 health insurance",
+      "$0 monthly premium",
+      "zero dollar health insurance",
+      "health insurance marketplace",
+      "marketplace health plan",
+      "premium tax credit",
+      "affordable health insurance",
+      "free health insurance",
+      "health insurance quote",
+      "health coverage",
+      "open enrollment"
+    ],
+    "angle": [
+      "speak to a licensed agent",
+      "licensed agents standing by",
+      "licensed insurance agent",
+      "call to see if you qualify",
+      "call now to see if you qualify",
+      "call for a free quote",
+      "tap to call",
+      "one quick call",
+      "call the number",
+      "give us a call today",
+      "you may qualify for health insurance",
+      "see if you qualify for a health plan",
+      "under $50,000",
+      "make less than",
+      "health insurance for self-employed",
+      "gig workers health insurance",
+      "special enrollment period",
+      "lost your job health insurance"
+    ],
+    "discovery": [
+      "health insurance",
+      "health plan",
+      "medical insurance",
+      "get covered",
+      "health insurance enrollment",
+      "healthcare plan",
+      "health benefits"
+    ]
+  },
+  "listicle_pages": [],
+  "reference_links": [],
+  "caps": {
+    "per_keyword": 150,
+    "per_page": 300,
+    "discovery_per_keyword": 80
+  },
+  "niche_match": {
+    "include": "affordable care act|\\bACA\\b|obama ?care|health ?(care )?(insurance|plan|plans|coverage|benefit|benefits)|medical (insurance|coverage|plan)|marketplace (plan|coverage|insurance)|premium tax credit|subsid(y|ies|ized)|healthcare\\.gov|major medical|health ?care coverage|seguro (de |m[eé]dico|de salud)|seguros? m[eé]dicos?|plan(es)? (de )?salud|cobertura (m[eé]dica|de salud)|subsidio|inscripci[oó]n|mercado de seguros|cuidado de salud asequible",
+    "context": "call|phone|agent|qualify|enroll|coverage|premium|subsidy",
+    "note": "An ad is on-niche if `include` matches after `exclude` phrases are stripped. Pet insurance, dental-only, vision-only, Medicare Advantage and life insurance are adjacent verticals that share vocabulary — they are stripped before the include test so they do not pollute ACA angle and hook analysis. Medicare copy is SMID-gated on your side anyway and is a separate niche. Spanish-language ACA copy (seguro de salud, plan de salud, cobertura médica, subsidio) counts as on-niche — 115 of the baseline's raw ads were Spanish. Tightened 2026-09-12 after the baseline: 'licensed agent', 'ppo/hmo', 'copay', 'deductible' alone are call/insurance vocabulary, not ACA signals (they let Medicare Advantage call ads and an auto-glass shop through). Every 'Medicare' / 'Medi-Cal' / 'Medigap' mention is stripped before the include test; ACA ads that say 'not on Medicaid or Medicare' still match on their own terms. 'open/special enrollment' and '$0/month' alone were dropped from include (childcare enrollment ads and Medicare $0-premium D-SNP ads matched on them); ACA ads carry 'health insurance/plan/coverage', 'ACA', 'Obamacare', 'marketplace' or 'subsidy' anyway.",
+    "exclude": "pet (health )?insurance|pet plan|dental (insurance|plan|coverage)|vision (insurance|plan)|\\bmedicare\\b|\\bmedi-?cal\\b|medigap|life insurance|final expense|burial insurance|car insurance|auto insurance|home insurance|renters insurance|business insurance|workers.? comp|disability insurance|travel insurance|medicare advantage|part [abcd]\\b|turning 65|over 65|\\b65\\+|\\bseniors?\\b|dual[- ]eligible|d-?snp|childcare|child care|preschool|pre-?k\\b|kindergarten|\\bvpk\\b|daycare|day care|learning center"
+  },
+  "call_signals": {
+    "note": "Pay-per-call is the point of this niche. Every ad is additionally tagged as call-driven when ANY of these fire: cta_type CALL_NOW, CTA text 'Call now', a phone number in copy/title, or call language in copy. Reported as its own cut in REPORT.md. anti_regex marks ads that explicitly promise NO phone call (form / self-enroll funnels positioning against pay-per-call spam) — they are reported as `anti_call`, never as call-driven, unless they also carry a CALL_NOW CTA or a written phone number. tel: links are read from `url` AND from `xlinks` (extra_links).",
+    "cta_types": [
+      "CALL_NOW",
+      "CALL"
+    ],
+    "cta_text": "^call( now| us| today)?$",
+    "phone_regex": "\\(?\\b[2-9]\\d{2}\\)?[-. ]?\\d{3}[-. ]?\\d{4}\\b|\\b1?[-. ]?8(00|33|44|55|66|77|88)[-. ]?\\d{3}[-. ]?\\d{4}\\b",
+    "copy_regex": "\\bcall (now|today|us|the number|me|our office|to (see|find out|enroll|check|speak|get|learn|apply|start|claim))|\\btap to call\\b|click to call|\\bspeak (to|with) (a |an |our |one of our )?(licensed |live |real |friendly )?(agent|representative|specialist|advisor|enroller|expert)|\\btalk to (a |an )?(licensed |live )?(agent|person|human|specialist)|licensed agents? (are )?(standing by|waiting|available|ready)|\\bhotline\\b|\\btoll[- ]free\\b|\\bdial\\b|one (quick |simple |short )?(phone )?call|give us a call|call for (a |your )?(free )?quote|ll[aá]m(a|e|anos|enos|ame|ala)\\b|por tel[eé]fono|gọi (ngay|cho)|liên hệ",
+    "anti_regex": "without (a |all the |the |any |all those |a single |endless )?(phone |sales |spam |annoying )?calls?\\b|no (pushy |annoying |spam |sales |robo|endless |unwanted )?(phone |sales |spam )?calls?\\b|(20|dozens of|endless|multiple|a bunch of) (phone )?calls|won.?t (get|receive) (a )?(bunch of |20 )?calls|enroll online|100% online|no (agent|salesperson) (needed|required|will call)|nocallhealth"
+  },
+  "tracked_pages": {
+    "note": "Filled 2026-09-12 from the baseline. Tier 1 = full library pull every run (cap 250); tier 2 = capped pull (80); tier 3 = keyword coverage only / known noise to keep excluded. Re-tier when volumes move.",
+    "caps": {
+      "tier1": 250,
+      "tier2": 80,
+      "tier3": 0
+    },
+    "pages": [
+      {
+        "pid": "597292440133211",
+        "name": "Alexis Lewis",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "link.apisystem.tech persona page — anti-call self-enroll cluster",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "899704559887556",
+        "name": "Robert Scott",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "same cluster",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "598894416646470",
+        "name": "Health Benefits Enrollment Center",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "same cluster",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "105566869207336",
+        "name": "Relief Funding Navigator",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "same cluster (partial 2026-09-12: rate-limited)",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "289811518225280",
+        "name": "The Healthy Insurance Dude",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "phone-in-copy 817-205-6257, underwritten PPO",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "898631863655618",
+        "name": "Getmehealthinsurance.org",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "'Keep Your Doctors in 2026' x41, title 'Call Now'",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "134251173097099",
+        "name": "OHR Insurance",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "Spanish, WhatsApp CTA, x71",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "102720336121632",
+        "name": "Self Employed Health Insurance",
+        "bucket_seen": "unclassified",
+        "tier": 1,
+        "note": "56 ads x106, go.selfemployedhi.com",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "476232332417195",
+        "name": "Covered California",
+        "bucket_seen": "branded",
+        "tier": 1,
+        "note": "state exchange, 'When life calls, call us'",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "1197044180152314",
+        "name": "Acero Insurance",
+        "bucket_seen": "branded",
+        "tier": 1,
+        "note": "Spanish agent, phone 305-589-2222 in every ad",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "994429573753744",
+        "name": "Private Health Care",
+        "bucket_seen": "branded",
+        "tier": 1,
+        "note": "privatehealthcareoptions.com — live-agent call marketplace, TCPA",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "713649605170224",
+        "name": "Health Revolution",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "private PPO pre-lander",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "441170345748412",
+        "name": "Forever Family Coverage",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "ACA app funnel, NPN agent, 258d creative (partial 2026-09-12)",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "360525900484036",
+        "name": "The Health Whiz",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "note": "private PPO template shared with KR / Landfair (partial 2026-09-12)",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "124573124239660",
+        "name": "MetroPlusHealth",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "note": "NY plan, CALL_NOW",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "1514103902185302",
+        "name": "A+ Insurance Designers",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "note": "Vietnamese agent, phone 888-201-5899",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "115261019010458",
+        "name": "GRAN Insurance",
+        "bucket_seen": "unclassified",
+        "tier": 2,
+        "note": "Spanish, tel: link 941-213-7556, 471d creative",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "517675998100623",
+        "name": "Capital Growth Advisors",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "note": "tel: link 561-460-1398 + anti-call copy",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "1360629130463957",
+        "name": "InsuranceQuote.AI",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "note": "anti-call positioning, wellnesshelp.org",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "779673865239791",
+        "name": "KR Insurance Agency",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "note": "Health Whiz template",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "759381647269863",
+        "name": "Landfair Financial Group",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "note": "Health Whiz template (partial 2026-09-12)",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "212610318596777",
+        "name": "Johnson Insurance Co",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "note": "Georgia agent, CALL_NOW DCO",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "104924158170964",
+        "name": "Global ADC Insurance",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "note": "Spanish, CALL_NOW",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "316542835062124",
+        "name": "Healthcare.com",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "note": "welcome.healthcare.com/health/aca",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "585043121347906",
+        "name": "American Ally",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "note": "high-income private plan angle",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "112358268578356",
+        "name": "My-Obamacare-Rates",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "note": "",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "114961684942432",
+        "name": "Affordable Health Insurance",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "note": "'Most people don't realize this…' x12 120d",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "109200868014294",
+        "name": "burkholzinsurance",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "note": "WhatsApp ACA",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "130163127032931",
+        "name": "HealthCare.gov",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "note": "the real exchange — context only",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "123992797699147",
+        "name": "Medica Health Plans",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "note": "carrier",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "132557463452442",
+        "name": "UPMC Health Plan",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "note": "carrier",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "1436216203284038",
+        "name": "Gold Coast Health Plan",
+        "bucket_seen": "exclude",
+        "tier": 3,
+        "note": "Medi-Cal / D-SNP dual plan leaking via page name — not ACA",
+        "source": "2026-09-12 baseline"
+      },
+      {
+        "pid": "476845349150399",
+        "name": "Piedmont Airlines",
+        "bucket_seen": "exclude",
+        "tier": 3,
+        "note": "hiring ads mentioning health insurance — noise",
+        "source": "2026-09-12 baseline"
+      }
+    ]
+  },
+  "analysis": {
+    "angles": [
+      [
+        "subsidy-entitlement",
+        "subsid|premium tax credit|tax credit|government (pays|will pay|assistance|help|program)|you (may|could|might) (qualify|be eligible)|qualif(y|ies) for (\\$0|free|a \\$0|zero)|approved for|entitled|federal (program|assistance|help)|aca (credit|benefit)"
+      ],
+      [
+        "zero-premium",
+        "\\$0(\\.00)? ?(a |per |\\/)?(month|mo\\b)|\\$0 (health|plan|premium|coverage|monthly)|zero[- ]dollar|\\$0 premium|free health (insurance|coverage|plan)|no monthly (cost|premium)|100% covered|at no cost"
+      ],
+      [
+        "income-qualification",
+        "(make|earn|making|earning|income) (less than|under|below|between) \\$?\\d|under \\$?\\d{2,3}(,000|k)\\b|household income|based on (your )?income|if you make|income (limit|requirement)"
+      ],
+      [
+        "eligibility-quiz",
+        "see if you qualify|check (your )?eligibilit|do you qualify|enter (your )?zip|answer (a few|\\d|three|two) (quick )?questions|take (the|this|our) (quiz|survey)|check if you qualify|find out if you qualify|(30|60)[- ]second|quick (quiz|survey|form)"
+      ],
+      [
+        "call-to-enroll",
+        "\\bcall (now|today|us|me|the number|our office|to (see|find out|enroll|check|speak|get|learn|apply|start|claim))|\\btap to call\\b|click to call|\\bspeak (to|with) (a |an |our |one of our )?(licensed |live |real |friendly )?(agent|representative|specialist|advisor|enroller|expert)|\\btalk to (a |an )?(licensed |live )?(agent|person|human|specialist)|licensed agents? (are )?(standing by|waiting|available|ready)|\\bhotline\\b|\\btoll[- ]free\\b|\\bdial\\b|one (quick |simple |short )?(phone )?call\\b|give us a call|call for (a |your )?(free )?quote|ll[aá]m(a|e|anos|enos|ame|ala)\\b|por tel[eé]fono|gọi (ngay|cho)|\\(?\\b[2-9]\\d{2}\\)?[-. ]\\d{3}[-. ]\\d{4}\\b"
+      ],
+      [
+        "anti-call",
+        "without (a |all the |the |any |all those |a single |endless )?(phone |sales |spam |annoying )?calls?\\b|no (pushy |annoying |spam |sales |robo|endless |unwanted )?(phone |sales |spam )?calls?\\b|(20|dozens of|endless|multiple|a bunch of) (phone )?calls|won.?t (get|receive) (a )?(bunch of |20 )?calls|enroll online|100% online|no (agent|salesperson) (needed|required|will call)|nocallhealth"
+      ],
+      [
+        "deadline-enrollment",
+        "open enrollment (ends|deadline|is (ending|closing|almost over))|deadline|last (chance|day|week)|ends (soon|on|this|tonight|dec|jan|nov)|before (it.?s too late|the deadline|dec|jan|nov)|don.?t miss|expires?|final (days|call|notice)|limited (time|window)|enrollment (period|window) (is|ends|closes)"
+      ],
+      [
+        "life-event-sep",
+        "special enrollment|qualifying (life )?event|lost (your |my )?(job|coverage|insurance|employer)|laid off|turning 26|moved|got married|had a baby|new baby|divorce|lost medicaid|medicaid (ended|unwinding|redetermin)|no longer (qualify|eligible) for medicaid|cobra"
+      ],
+      [
+        "self-employed-gig",
+        "self[- ]employed|gig (worker|economy|driver)|1099|freelanc|independent contractor|small business (owner|owners)|uber|lyft|doordash|entrepreneur|side hustle|contractor(s)? (like|who)|realtor|barber|truck(er|ing)"
+      ],
+      [
+        "price-anchor",
+        "\\$\\d[\\d,]* ?(a |per |\\/)?(month|mo\\b|year|yr).{0,60}\\$\\d|instead of \\$\\d|(was|were) paying \\$\\d|save (up to )?\\$\\d|cut (your|the) (premium|cost|bill)|(half|fraction) (the|of the) (cost|price)|compare(d)? to \\$\\d|as low as \\$\\d"
+      ],
+      [
+        "benefits-list",
+        "doctor visits?|prescriptions?|dental|vision|urgent care|preventive|no deductible|low deductible|copay|ppo|hmo|hospital|maternity|mental health|telehealth|specialist visits|coverage (for|includes)|(covers|includes|with) (doctor|dental|prescription|vision)"
+      ],
+      [
+        "cash-back-card",
+        "(get|receive|claim) (up to )?\\$\\d[\\d,]* (back|cash|per month|a month|\\/mo)|cash (back|card|benefit)|spending card|(grocery|food|flex|allowance|benefit) card|money back (from|in)|\\$\\d[\\d,]* (in )?(benefits|allowance|credit)|put money back|paid (back|to you)|stimulus|refund"
+      ],
+      [
+        "spanish-latino",
+        "seguro (de|m[eé]dico)|obamacare gratis|cobertura|plan(es)? de salud|asegur|licencia|agente|llama|gratis|inscripci[oó]n|subsidio|cotizaci[oó]n|hispan|latino|en espa[nñ]ol"
+      ],
+      [
+        "trust-licensed",
+        "licensed|certified|accredited|a\\+ rated|bbb|trusted|no scam|legit|real (agent|people)|local (agent|office)|family[- ]owned|since \\d{4}|(\\d+,?\\d*|thousands of) (families|clients|americans|members) (enrolled|helped|trust)"
+      ],
+      [
+        "insurer-brand",
+        "blue ?cross|bcbs|anthem|aetna|cigna|united ?health|uhc|ambetter|oscar|molina|kaiser|humana|centene|wellcare|florida blue|highmark|carefirst|health ?net|bright health|friday health"
+      ],
+      [
+        "fear-uninsured",
+        "uninsured|without (health )?(insurance|coverage)|no (health )?insurance|medical (bills?|debt)|bankrupt|one (accident|emergency|hospital)|er visit|emergency room|(can.?t|cannot) afford (to get sick|a hospital)|penalty|gap in coverage|what if you get sick|god forbid"
+      ],
+      [
+        "premium-hike-2026",
+        "premiums? (are |is )?(going|went|shooting|skyrocketing) up|rate (hike|increase)|(enhanced )?(subsidies|tax credits|credits) (expire|expired|expiring|end|ended|ending|cut|gone)|(2026|2027) (premiums|rates|changes|subsidies)|(double|doubled|doubling) (your |in )?premium|price (hike|increase|jump)|lock in (your )?(rate|price)"
+      ],
+      [
+        "listicle-advertorial",
+        "here.?s what|\\d+ (things|ways|reasons|questions|mistakes|tips)|we compared|guide to|read this|what you need to know|most people don.?t know|nobody (tells|told) you"
+      ],
+      [
+        "persona-story",
+        "^(i|my|we) (was|were|had|got|found|just|couldn|didn|used to)|i (was|had been) paying|my (husband|wife|family|kids|daughter|son)|as a (mom|dad|nurse|teacher)|(single|stay.at.home) (mom|dad|parent)"
+      ]
+    ],
+    "triggers": [
+      [
+        "entitlement",
+        "qualif|eligib|entitled|you may be|approved|program|owed|benefit|free (health|plan|coverage)|\\$0|subsid|tax credit|government"
+      ],
+      [
+        "loss-aversion",
+        "deadline|before|last chance|miss out|expires|limited|ends|only \\d+|don.?t wait|too late|penalty|lose (your )?(coverage|subsidy|credit)|going up|final"
+      ],
+      [
+        "fear-uninsured",
+        "uninsured|without (insurance|coverage)|medical bills?|bankrupt|accident|emergency|hospital|get sick|er visit|debt|gap in coverage"
+      ],
+      [
+        "relief-rescue",
+        "we (handle|take care|do the|help you|find|compare|shop)|no (hassle|paperwork|stress|obligation)|one (quick |simple )?call|(agent|specialist|expert) (will|can) (help|walk|find|handle)|done for you|let us|hassle-?free|in minutes|easy|simple"
+      ],
+      [
+        "suspicion",
+        "overpay|won.?t tell|upsold|rip|truth|scam|hidden|secret|full price|what (they|insurers?|the government) don.?t|too much|being (charged|overcharged)"
+      ],
+      [
+        "curiosity",
+        "here.?s what|wondering|what (most|if)|you won.?t believe|find out|most people don.?t know|did you know|nobody (tells|told)|little[- ]known|surprising"
+      ],
+      [
+        "social-proof",
+        "\\d[\\d,]*\\+? (americans|families|people|members|clients|customers) (have|are|already|enrolled|trust)|reviews|rated|trusted by|testimonial|thousands|millions|join"
+      ],
+      [
+        "urgency-speed",
+        "today|right now|instant|in (just )?(minutes|seconds)|same[- ]day|immediately|within \\d+ (minutes|hours)|start(s)? (coverage )?(today|tomorrow|immediately)|now\\b"
+      ],
+      [
+        "identity",
+        "self[- ]employed|gig|1099|freelanc|latino|hispanic|espa[nñ]ol|veteran|senior|families|parents|moms?|dads?|nurses?|teachers?|drivers?|barbers?|realtors?|small business|under 65|over 50|young adults?"
+      ],
+      [
+        "money-in-pocket",
+        "cash|get paid|money back|card|allowance|save \\$|savings|refund|put money|extra \\$|\\$\\d[\\d,]* (back|per month|a month|in benefits)"
+      ]
+    ],
+    "note": "Loaded by angles.mjs as [[name, regexSource], ...]. Written 2026-09-12 for the ACA pay-per-call niche; extend rather than force-fit.",
+    "rvert": {
+      "note": "Full RVERT specs for ACA pay-per-call — REPLACES the home-services defaults dimension by dimension (score.mjs compileSpec). Bases match the defaults (R4 V3 E4 Rk5 T4). Labels containing 'mechanism' / 'pre-empts' count as a reason-why and disarm the bold-claim penalty.",
+      "real": {
+        "base": 4,
+        "rules": [
+          [
+            "licensed (insurance |health )?(agent|broker|advisor|professional)|licensed (and|&) certified|state[- ]licensed|\\bnipr\\b|\\bnpn\\b",
+            1.5,
+            "licensed agent named (checkable)"
+          ],
+          [
+            "healthcare\\.gov|marketplace|affordable care act|\\baca\\b|obamacare|premium tax credit|tax credit|subsid",
+            1.2,
+            "names the actual program mechanism"
+          ],
+          [
+            "(make|earn|income) (less than|under|below) \\$?\\d|under \\$\\d{2,3}(,000|k)\\b|between \\$\\d[\\d,]* and \\$\\d[\\d,]*|household of \\d|family of \\d",
+            2.0,
+            "specific income threshold — reason-why mechanism for the subsidy"
+          ],
+          [
+            "blue ?cross|bcbs|anthem|aetna|cigna|united ?health|ambetter|oscar|molina|kaiser|humana|florida blue|carefirst|highmark",
+            1.0,
+            "carrier named"
+          ],
+          [
+            "(enhanced )?(subsidies|tax credits) (expire|expired|expiring|end|ended|ending)|premiums? (are |is )?(going|went) up|rate (hike|increase)|new (2026|2027) (rules|rates|premiums)",
+            1.5,
+            "topical mechanism (why prices changed)"
+          ],
+          [
+            "sounds? (impossible|crazy|fake|too good|like a scam)|i know what you.{0,10}re thinking|no way (that|this).{0,5}s real|i didn.{0,3}t believe it either|not a scam|this is (100% )?(real|legit)",
+            2.2,
+            "pre-empts the disbelief itself"
+          ],
+          [
+            "(was|were) paying \\$\\d[\\d,]*.{0,60}(now|only|just) \\$\\d|instead of \\$\\d[\\d,]*|from \\$\\d{3,} (to|down to) \\$\\d",
+            1.5,
+            "before/after price demo"
+          ],
+          [
+            "\\$\\s?\\d[\\d,]{2,}\\b.{0,60}\\$\\s?\\d[\\d,]{2,}\\b",
+            1.0,
+            "two concrete numbers, not a vague claim"
+          ],
+          [
+            "\\bnpn\\b|lic(ense)? ?#|license number|\\btty\\b|se habla|not (affiliated|endorsed) with",
+            0.8,
+            "compliance markers"
+          ],
+          [
+            "\\b\\d{1,3}[-.) ]\\d{3}[-.]\\d{4}\\b",
+            0.5,
+            "phone number shown"
+          ],
+          [
+            "\\b(best (coverage|rates|plans|price)|great (rates|coverage|deal)|top[- ]rated|quality you can trust|trusted name|your trusted|affordable (rates|options))\\b",
+            -1.2,
+            "vague claim, nothing checkable"
+          ],
+          [
+            "(get|receive|claim) (up to )?\\$\\d[\\d,]* (back|cash|per month|a month)|cash card|spending card|money back from the government|stimulus",
+            -1.5,
+            "cash-back framing with no mechanism reads as bait"
+          ]
+        ]
+      },
+      "value": {
+        "base": 3,
+        "rules": [
+          [
+            "\\$0(\\.00)? ?(a |per |\\/)?(month|mo\\b)|\\$0 (health|plan|premium|coverage|monthly)|zero[- ]dollar|\\$0 premium|no monthly (cost|premium)",
+            3.5,
+            "$0 / zero premium"
+          ],
+          [
+            "free health (insurance|coverage|plan)|100% covered|at no cost|completely free|for free",
+            3.0,
+            "free coverage"
+          ],
+          [
+            "save (up to )?\\$\\d[\\d,]*|(was|were) paying \\$\\d[\\d,]*.{0,60}(now|only) \\$\\d|instead of \\$\\d[\\d,]*|cut (your|the) (premium|cost|bill) (in half|by)",
+            2.5,
+            "explicit savings / anchor gap"
+          ],
+          [
+            "(get|receive|claim) (up to )?\\$\\d[\\d,]* (back|cash|per month|a month|in benefits)|cash (back|card)|spending card|allowance",
+            2.0,
+            "cash-in-hand payoff"
+          ],
+          [
+            "doctor visits?|prescriptions?|dental|vision|urgent care|no deductible|low deductible|\\$\\d+ copay|telehealth|maternity|mental health",
+            1.5,
+            "benefits spelled out"
+          ],
+          [
+            "(full|major medical|comprehensive|complete) (coverage|health plan)|\\bppo\\b|nationwide (network|coverage)|any doctor",
+            1.2,
+            "full coverage, not a discount card"
+          ],
+          [
+            "same[- ]day|coverage (starts|begins) (today|tomorrow|immediately|the 1st)|enroll(ed)? (today|in minutes)",
+            1.0,
+            "coverage starts fast"
+          ],
+          [
+            "whole family|entire family|your (kids|children|family) (covered|too)|family (plan|coverage)",
+            0.8,
+            "family covered"
+          ],
+          [
+            "\\b(short[- ]term|limited benefit|indemnity|discount (plan|card)|not insurance|supplement(al)?)\\b",
+            -2.0,
+            "not real major-medical coverage"
+          ],
+          [
+            "\\b(quote|estimate|information|learn more|find out more)\\b(?!.{0,30}\\$)",
+            -1.0,
+            "payoff is only information"
+          ]
+        ]
+      },
+      "energy": {
+        "base": 4,
+        "rules": [
+          [
+            "\\bcall (now|today|us|the number|to)|tap to call|speak (to|with) (a |an |our )?(licensed |live )?(agent|representative|specialist)|by phone|over the phone",
+            1.2,
+            "phone call is the action (one tap on mobile, but you have to talk)"
+          ],
+          [
+            "\\b(answer|take) (a few|\\d+|three|3) (quick |simple )?questions?\\b|\\bquiz\\b|\\bsurvey\\b",
+            1.0,
+            "multi-step quiz"
+          ],
+          [
+            "\\b(schedule|book) (a |your )?(free )?(appointment|consultation|call)\\b",
+            1.5,
+            "appointment booking"
+          ],
+          [
+            "\\b(name|email).{0,25}(phone|email|name)",
+            1.5,
+            "multi-field form"
+          ],
+          [
+            "upload|documents|proof of income|tax return|pay stubs|w-?2|1095",
+            1.5,
+            "paperwork required"
+          ],
+          [
+            "(30|60)[- ]second|in (under )?(2|two|3|three|5|five) minutes|takes? (less than )?(a|one|2|3) minutes?|quick (quiz|survey|form)|\\d (quick )?questions",
+            -1.2,
+            "short form promised"
+          ],
+          [
+            "licensed agents? (are )?(standing by|waiting|available|ready)|we (do|handle) (all )?the (paperwork|work|shopping)|done for you|let us (find|compare|shop)",
+            -1.0,
+            "agent does the work"
+          ],
+          [
+            "\\benter (your )?zip\\b|\\bzip code\\b|check your zip",
+            -1.5,
+            "single zip field"
+          ],
+          [
+            "\\b(instant|instantly|in (under )?\\d+ seconds?|takes? \\d+ seconds?|in less than a minute|apply online)\\b",
+            -1.5,
+            "speed promised"
+          ],
+          [
+            "\\b(no (forms?|paperwork|obligation|commitment|hassle)|no strings)\\b",
+            -1.2,
+            "friction disarmed"
+          ],
+          [
+            "\\b(tap|click) (below|learn more|get quote|here)\\b",
+            -0.8,
+            "one tap"
+          ],
+          [
+            "en espa[nñ]ol|se habla espa[nñ]ol|spanish[- ]speaking",
+            -0.5,
+            "language barrier removed"
+          ]
+        ]
+      },
+      "risk": {
+        "base": 5,
+        "rules": [
+          [
+            "sounds? (impossible|crazy|fake|too good|like a scam)|i know what you.{0,10}re thinking|no way (that|this).{0,5}s real|i didn.{0,3}t believe it either",
+            -1.8,
+            "names the objection before you can"
+          ],
+          [
+            "no (obligation|commitment|pressure|spam|cost to (talk|call|apply)|hidden fees|pushy|salesman|sales ?person)|free (to call|consultation|quote)|no strings attached",
+            -1.5,
+            "no-obligation stated"
+          ],
+          [
+            "licensed|certified|accredited|a\\+ rated|\\bbbb\\b|\\bnpn\\b|lic(ense)? ?#",
+            -1.0,
+            "credential markers"
+          ],
+          [
+            "\\d[\\d,]*\\+? (americans|families|people|members|clients) (have|are|already|enrolled|trust|helped)|thousands|rated \\d(\\.\\d)?|reviews",
+            -0.8,
+            "volume proof"
+          ],
+          [
+            "not (affiliated|endorsed|connected) with|paid (advertisement|ad)|this is an advertisement|for licensed agents",
+            -0.5,
+            "disclaimer present"
+          ],
+          [
+            "\\b(salesman|sales rep|representative will|someone will (call|contact|reach)|we.?ll (call|reach out|contact) you)\\b",
+            1.5,
+            "implies a sales call"
+          ],
+          [
+            "\\bcall (now|today|us)|speak (to|with)|\\bagent\\b",
+            0.8,
+            "you will be talking to a salesperson"
+          ],
+          [
+            "(get|receive|claim) (up to )?\\$\\d[\\d,]* (back|cash|per month)|cash card|spending card|stimulus|free money",
+            1.5,
+            "smells like bait"
+          ],
+          [
+            "/[\\u{1D400}-\\u{1D7FF}]/u",
+            1.0,
+            "unicode-styled text reads as spam"
+          ]
+        ]
+      },
+      "time": {
+        "base": 4,
+        "rules": [
+          [
+            "same[- ]day|coverage (starts|begins) (today|tomorrow|immediately)|enroll(ed)? (today|in minutes)|instant(ly)? (quote|approval|coverage)|in (under )?\\d+ (minutes|seconds)|(30|60)[- ]second|right now",
+            -1.8,
+            "answer / coverage is immediate"
+          ],
+          [
+            "see if you qualify|check (your )?eligibilit|find out (if|how much)|get (a|your) (free )?quote",
+            -1.0,
+            "qualification answer is the payoff"
+          ],
+          [
+            "\\bcall (now|today|us)|speak (to|with)|tap to call",
+            -0.6,
+            "a call resolves it on the spot"
+          ],
+          [
+            "open enrollment (starts|begins) (nov|november|on)|coverage (starts|begins) (jan|january|next year)|effective (jan|january|1\\/1)|starting (in )?(2027|january)",
+            1.5,
+            "payoff is next year"
+          ],
+          [
+            "application|apply (online|now)|approval (takes|process)|we.?ll (call|reach out|contact) you|someone will (call|contact)|call ?back|schedule (a|your) (call|appointment)",
+            0.8,
+            "wait for a callback / approval step"
+          ],
+          [
+            "\\b(weeks?|\\d+ ?- ?\\d+ days)\\b",
+            0.8,
+            "explicit multi-day wait"
+          ]
+        ]
+      },
+      "bold": "\\$0(\\.00)? ?(a |per |\\/)?(month|mo\\b)|free health (insurance|coverage)|(get|receive|claim) (up to )?\\$\\d[\\d,]* (back|cash|per month)|cash card|100% covered|at no cost",
+      "aggression": [
+        [
+          "\\$0(\\.00)? ?(a |per |\\/)?(month|mo\\b)|\\$0 (health|plan|premium|coverage)|zero[- ]dollar|free health (insurance|coverage)",
+          "price shock ($0)"
+        ],
+        [
+          "(was|were) paying \\$\\d[\\d,]*.{0,60}(now|only|just) \\$\\d|instead of \\$\\d[\\d,]*|save (up to )?\\$\\d{3,}|from \\$\\d{3,} (to|down to) \\$\\d",
+          "anchor gap named"
+        ],
+        [
+          "(get|receive|claim) (up to )?\\$\\d[\\d,]* (back|cash|per month|a month)|cash (back|card)|spending card|money back from the government|stimulus",
+          "cash-back bait"
+        ],
+        [
+          "(make|earn|income) (less than|under|below) \\$?\\d|under \\$\\d{2,3}(,000|k)|only (for|if) (americans|households|families|people) (who|making|earning)|you must (be|make|earn|have)|who actually qualifies|(not|isn.?t) for everyone",
+          "qualification as exclusion"
+        ],
+        [
+          "deadline|last (chance|day|week)|ends (soon|tonight|this|on|dec|jan|nov)|before (it.?s too late|the deadline)|expires?|final (days|notice|call)|closing|window (closes|is closing)",
+          "hard deadline"
+        ],
+        [
+          "\\b\\d{1,3}\\s*(spots?|slots?|openings?|families|households|people|callers?)\\s*(left|remain(ing)?|per|available|only)|first \\d{1,3} (callers?|people|families)|only \\d{1,3} (spots?|slots?|left)",
+          "specific scarcity count"
+        ],
+        [
+          "sounds? (impossible|crazy|fake|too good|like a scam)|i know what you.?re thinking|no way (that.?s|this is) real|i didn.?t believe it either|not a scam|this is (100% )?(real|legit)|yes,? (it.?s|this is) real",
+          "objection pre-empt"
+        ],
+        [
+          "(subsidies|tax credits|credits) (expire|expired|expiring|end|ended|ending)|premiums? (are |is )?(going|went) up|rate (hike|increase)|(here.?s|this is) (how|why) (it|this|the price)|because (the government|congress|the aca|the new law)|the reason (is|why)|that.?s (how|why) (we|they|you)|what (most|the) (agents|insurers|companies) (won.?t|don.?t) tell",
+          "reason-why mechanism"
+        ],
+        [
+          "lose (your )?(subsidy|credit|coverage|eligibility)|(stuck|end up) (paying|uninsured)|or (you.?ll )?pay (full|more|double)|permanently|forever|too late|penalt",
+          "loss framing on the deadline"
+        ]
+      ],
+      "urgency": [
+        [
+          "\\b\\d{1,3}\\s*(spots?|slots?|openings?|families|households|people|callers?)\\s*(left|remain(ing)?|per|available|only)|first \\d{1,3} (callers?|people|families)",
+          0.3,
+          "specific scarcity count"
+        ],
+        [
+          "open enrollment (ends|deadline|is ending|closes)|enrollment (period|window) (ends|closes)|before (dec|jan|nov|the 15th|the deadline)|deadline is|last (day|chance)|ends (tonight|this week|friday|sunday)",
+          0.25,
+          "enrollment / hard deadline"
+        ],
+        [
+          "lose (your )?(subsidy|credit|coverage|eligibility)|(stuck|end up) (paying|uninsured)|or (you.?ll )?pay (full|more|double)|permanently|too late|penalt",
+          0.2,
+          "loss framing on the deadline"
+        ],
+        [
+          "(subsidies|tax credits) (expire|expiring|end|ending)|premiums? (are )?going up|lock in (your )?(rate|price)|rates? (go|going) up (in|on|next)",
+          0.2,
+          "price-change urgency"
+        ],
+        [
+          "\\b(limited (time|spots|slots)|while .{0,15}last|first come|filling up|almost full|act (now|fast)|hurry)\\b",
+          0.1,
+          "generic scarcity"
+        ],
+        [
+          "same[- ]day|coverage (starts|begins) (today|tomorrow)|enroll today|start(s)? (today|tomorrow|immediately)",
+          0.1,
+          "start-today framing"
+        ]
+      ]
+    }
+  },
+  "classify": {
+    "note": "ACA pay-per-call classifier overrides (keys per analyze.mjs). Affiliate tells here: benefit-center / quotes / savings aggregator names, persona pages, subsidy / $0 / cash-card program framing, quiz funnels, tracker links, off-niche page categories, and the low-likes-high-volume ratio. Branded tells: NPN / license numbers, a named agency with an office, carrier or state-exchange names, domain matching the page name.",
+    "agg_name": "(benefit(s)? (services?|center|group|enrollment|navigator|hub)|enrollment (center|hub|group)|health (whiz|revolution|hub|center|guide|savings|helpers?)|find (best|my|your)|top quotes|best quotes|get ?me|quotes?|compare|savings|relief|funding|navigator|self[- ]employed health|health insurance (hub|center|guide|help|now)|coverage (center|hub|guide|now)|family benefit|financial benefit|usa benefits|american benefits|national benefits|smart (life|savers|lifestyle)|wallet|money|lifestyle|daily|trends?|hacks?|tips|insider)",
+    "program": "(you (may|could|might) (qualify|be eligible)|see if you qualify|eligib|subsid|\\$0|zero[- ]dollar|free health|government|stimulus|cash back|spending card|allowance|premium tax credit|approved for|entitled|make (less than|under|below)|income (under|below)|under \\$\\d{2,3}(,000|k)|americans (who|making|earning)|new (law|program|rule)|program)",
+    "quiz_funnel": "\\/(quiz|survey|qualify|check|lp|s|apply|start|step|q|form|enroll|v\\d|go|get|offer|aca|health|hi|obamacare|subsidy)\\b",
+    "tracker": "(clickflare|redtrack|voluum|everflow|trk\\.|track\\.|go\\.|click\\.|r\\.|link\\.|lnk\\.|clk\\.|rtrk|trkr|jump\\.|hop\\.|redirect|offer\\.|promo\\.|deals?\\.|get\\.|try\\.|start\\.|apply\\.|enroll\\.)",
+    "track_param": "(sub_?id|clickid|aff_?id|utm_source=fb.*aff|ttclid|gclid=|oid=|aff_sub|\\bs[1-5]=|\\bc[1-3]=|rtkcid|cid=|pubid|pid=\\d|offer_?id|campaign_?id=\\d|source=fb|fbc=)",
+    "brand_sig": "(\\bnpn\\b|lic(ense)?\\.? ?#|license (number|no)|independent (agent|agency|broker|brokerage)|insurance (agency|agent|broker|group|solutions|services) (in|of|serving)|family[- ]owned|since \\d{4}|serving [A-Z][a-z]+|our office|walk[- ]in|se habla espa|blue ?cross|bcbs|aetna|cigna|united ?health|ambetter|oscar health|molina|kaiser|humana|florida blue|carefirst|anthem|covered california|pennie|nevada health link|ny state of health|maryland health connection|healthcare\\.gov|health ?net|centene|wellcare|community health|federally qualified|medicaid)",
+    "brand_sig_strong": "(\\bnpn\\b ?#? ?\\d{5,}|lic(ense)?\\.? ?#? ?[A-Z0-9]{5,}|\\d{1,5} [A-Z][a-z]+ (st|street|ave|avenue|blvd|boulevard|rd|road|dr|drive|way|pkwy|hwy)\\b|suite \\d+|ste\\.? \\d+|our office (at|in|on)|open (mon|tue|wed|thu|fri|monday)|hours:|walk[- ]ins? welcome)",
+    "trade_category": "(insurance|health|medical|financial|hospital|clinic|community organization|government organization|nonprofit)",
+    "mismatch_category": "(personal blog|digital creator|blogger|video creator|just for fun|entertainment|community|musician|band|artist|gym|fitness|restaurant|auto glass|logistics|trucking|real estate|clothing|beauty|salon|photograph|travel|church|education|news|media|public figure|product\\/service|shopping|retail|app page|software|e-?commerce|advertising|marketing agency|internet company)",
+    "persona_exclude": "(insurance|health|benefit|coverage|care|quotes?|advisors?|group|agency|financial|services|solutions|plans?|seguro|salud|medical|life|family)",
+    "low_likes_max": 3000,
+    "low_likes_min_ads": 12
+  },
+  "report": {
+    "note": "Read by tools/pdf-calls.mjs (the pay-per-call PDF). Written sections come from REPORT.md unchanged; these rules only drop off-niche leaks (Medicare / Medi-Cal / Medigap, final expense and life insurance, hiring, schools, clinics, unrelated local businesses) from the ad-card lists and the advertiser page table.",
+    "title": "ACA / Affordable Care Act — pay-per-call",
+    "file_slug": "ACA-Pay-Per-Call",
+    "exclude_page_regex": "^(Gold Coast Health Plan|Piedmont Airlines|Minnesota Values Campaign|Maine Army National Guard.*|EasyRx|HIIMS|Chapter|MedicareProz|MediGap Quotes|100Insure|Sisbro|DeBoer's Auto|Academy of Math and Science.*|Purity Coffee|Symple Foods|Everyday Dose|PurrPop|Valley Pediatric Dentistry|The Loose Leaf Tea|Desert Dental|Unique Industries.*|Rapid Recovery Agency|Keeton Auto Repair|Heartland Rehabilitation.*|Powers Services|Freedom Home Care|Davis Law Firm|American Steel Carports.*|BlitzscaleBroker|Futuro Seguro|Agente Karina Rodriguez|Best Care Tax & Insurance|Local Insurance Advisors|Wiser Health Insurance|Find Best Quotes|The Top Quotes|E Care Advisor|Ager Health|KelseyCare Advantage|Rite Way Auto Glass|Kiddie Academy.*|Platinum Roofing|Ricoma Embroidery Machines|Al Raheem Travels LLC|Healthspan MD|VisitorsCoverage|Red Cedar BC|Santa Clara Family Health.*|Oasis Academy|Volunteers in Medicine.*|Dr\\.PerformanceRx|Triforta|The Latch Link|Lasting Life Quotes|Texell Credit Union|Memorial Hospital.*|Legacy Community Health.*|Estrella Medical Centers|Carlos Castellanos.*|Quality Financial Group|Senior Health Benefits 365)$",
+    "exclude_copy": "medicare advantage|original medicare|new to medicare|aging into medicare|turning 65|enroll(ing)? in medicare|medicare (coverage|plans?|benefits|supplement|enrollment|options|part)|both medicare and medi-cal|\\bmedi-cal\\b|medigap|\\bplan g\\b|final expense|burial insurance|we.?re hiring|now hiring|join (our|the) .{0,40}team|technician|re-?enrollment is|now enrolling|preschool|childcare|kindergarten|piles|fissure|fistula",
+    "exclude_hook": "^disclaimers?:?$|seguro de vida|\\biul\\b",
+    "call_cards": 20,
+    "anti_cards": 12,
+    "lang_cards": 10,
+    "agg_cards": 20,
+    "page_rows": 40,
+    "script_rows": 15,
+    "quiet_rows": 12
+  }
+}

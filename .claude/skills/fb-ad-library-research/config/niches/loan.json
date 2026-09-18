@@ -1,0 +1,54 @@
+{
+  "niche": "loan",
+  "label": "Personal Loans / Debt Consolidation",
+  "country": "US",
+  "keywords": {
+    "core": [
+      "personal loan",
+      "debt consolidation loan",
+      "installment loan",
+      "loan approval",
+      "get approved for a loan",
+      "bad credit loan",
+      "no credit check loan",
+      "consolidate your debt",
+      "lower your payments",
+      "loan up to",
+      "fixed rate personal loan"
+    ],
+    "angle": [
+      "see if you qualify",
+      "check your rate",
+      "no impact to your credit score",
+      "get up to",
+      "as low as",
+      "approved in minutes",
+      "funds as soon as",
+      "we're looking for homeowners",
+      "relief program",
+      "loan relief",
+      "one simple payment",
+      "enter zip"
+    ],
+    "discovery": [
+      "loan",
+      "borrow money",
+      "cash loan",
+      "credit card debt",
+      "payoff debt"
+    ]
+  },
+  "caps": {
+    "per_keyword": 150,
+    "per_page": 400,
+    "discovery_per_keyword": 80
+  },
+  "seed_pages": [],
+  "niche_match": {
+    "include": "\\bloan(s)?\\b|\\bpersonal loan|\\bdebt consolidat|\\binstallment loan|\\bAPR\\b|\\bborrow(ing)?\\b|\\blend(er|ing)\\b|\\bcredit score\\b|\\bpayoff (your )?debt|\\brefinanc",
+    "exclude": "\\b(for|attention) loan (officers?|brokers?|companies|business owners)\\b|\\b(run|own|operate)s? a (loan|lending) (business|company)\\b",
+    "context": "credit|debt|APR|interest rate|monthly payment|approved|lender",
+    "note": "An ad is on-niche if `include` matches after `exclude` phrases are stripped. Ads selling TO loan officers/brokers (recruiting, CRM software, leads-for-sale) are B2B, not competitors, and are excluded too. Mortgage-specific and payday-specific ads will match here too since the wording overlaps heavily with personal loans / debt consolidation \u2014 tighten `include`/`exclude` once you've seen a week of real results and know which adjacent verticals are noise for you."
+  },
+  "notes": "Starter config \u2014 seed_pages is intentionally empty. Add known competitor Facebook Page names (not URLs, not IDs \u2014 harvest.mjs resolves names to IDs itself and caches them) as you identify them from the keyword sweep's own results. Re-check keywords after the first run: read raw/ads-01.json and see what off-niche noise the discovery keywords pulled in, then tighten niche_match.exclude."
+}

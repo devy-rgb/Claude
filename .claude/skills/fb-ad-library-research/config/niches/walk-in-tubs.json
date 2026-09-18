@@ -1,0 +1,77 @@
+{
+  "niche": "walk-in-tubs",
+  "label": "Walk-In Tubs / Accessible Bathing",
+  "country": "US",
+  "source_sheet": "",
+  "keywords": {
+    "core": [
+      "walk in tub",
+      "walk-in bathtub",
+      "walk-in bath",
+      "accessible bathtub",
+      "senior bathtub",
+      "walk-in tub program",
+      "safe step tub",
+      "walk in tub program",
+      "accessible bath program",
+      "senior bath program",
+      "barrier-free bath",
+      "handicap bathtub"
+    ],
+    "angle": [
+      "see if you qualify",
+      "enter zip",
+      "seniors",
+      "get up to",
+      "must be a US resident",
+      "we're looking for homeowners",
+      "medicare",
+      "medicaid",
+      "safety in the bathroom",
+      "fall prevention",
+      "it actually worked",
+      "tub quiz"
+    ],
+    "discovery": [
+      "walk in tub",
+      "accessible bath",
+      "senior safety",
+      "bathroom safety",
+      "safe bathtub"
+    ]
+  },
+  "listicle_pages": [
+    "Smart Life",
+    "Wallet Saver",
+    "MONEY",
+    "walletjump"
+  ],
+  "caps": {
+    "per_keyword": 150,
+    "per_page": 400,
+    "discovery_per_keyword": 80
+  },
+  "niche_match": {
+    "include": "\\bwalk.in tub|\\bwalk.in bath|\\baccessible bath|\\bbarrier.free bath|\\bhandicap (bath|tub)|\\bsafe step|\\bsenior (bath|tub)|\\bAmeriGlide\\b|\\bKohler\\b.*tub|\\bJacuzzi\\b.*tub",
+    "context": "homeowner|home owner|senior|elderly|accessibility|safety|fall prevention",
+    "exclude": "bathtub gin|hot tub party|hot tub cover",
+    "note": "Baseline not yet run. Walk-in tubs overlap significantly with bath remodeling — classify by the specific product focus. Affiliates here may use Medicare/Medicaid framing (check compliance edge). RVERT scoring should flag health-fear + safety-crisis angles strongly."
+  },
+  "tracked_pages": {
+    "note": "No baseline yet. Pages will be discovered on first run.",
+    "caps": {
+      "tier1": 250,
+      "tier2": 80,
+      "tier3": 0
+    },
+    "pages": []
+  },
+  "watchlist_quiet": {
+    "note": "",
+    "pages": []
+  },
+  "funnel_networks": {
+    "note": "To be populated after first run.",
+    "domains": []
+  }
+}

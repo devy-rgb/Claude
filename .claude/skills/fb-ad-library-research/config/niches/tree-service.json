@@ -1,0 +1,255 @@
+{
+  "niche": "tree-service",
+  "label": "Tree Service / Tree Removal",
+  "country": "US",
+  "source_sheet": "https://docs.google.com/spreadsheets/d/1Tuen4HAFjGNTmMmmffT_LEs_ycvPkc1ZZA-a-4IvVqI/edit?gid=0#gid=0",
+  "sheet_watchlist_column": "Home services",
+  "sheet_note": "The Search terms tab has no Tree Service column (checked 2026-09-16). Keywords below were written for the baseline run; add a column to the sheet if the team wants to own them there.",
+  "keywords": {
+    "core": [
+      "tree removal",
+      "tree service",
+      "tree trimming",
+      "stump grinding",
+      "stump removal",
+      "tree cutting",
+      "emergency tree removal",
+      "tree removal cost",
+      "tree pruning",
+      "arborist",
+      "dead tree",
+      "tree removal program",
+      "free tree removal",
+      "tree removal quotes",
+      "compare tree removal quotes",
+      "tree removal near",
+      "land clearing",
+      "storm damage tree",
+      "fallen tree",
+      "hazardous tree",
+      "tree care",
+      "tree experts"
+    ],
+    "angle": [
+      "see if you qualify",
+      "enter zip",
+      "we're looking for homeowners",
+      "must be a US resident",
+      "how much you can get",
+      "get up to",
+      "homeowners insurance tree",
+      "trees near your house",
+      "overpaying tree",
+      "tree companies",
+      "senior discount tree",
+      "it actually worked"
+    ],
+    "discovery": [
+      "trees",
+      "stump",
+      "tree quote",
+      "tree estimate",
+      "limbs"
+    ]
+  },
+  "listicle_pages": [
+    "Smart Life",
+    "Wallet Saver",
+    "MONEY",
+    "walletjump"
+  ],
+  "caps": {
+    "per_keyword": 150,
+    "per_page": 400,
+    "discovery_per_keyword": 80
+  },
+  "niche_match": {
+    "include": "\\btree (removal|service|services|trimming|trim|cutting|care|pruning|work|company|companies|experts?|pros?|guys|crew|surgeon|specialists?)\\b|\\bstumps? (grinding|removal|grinder)|\\bstump grind|\\barborists?\\b|\\bdead trees?\\b|\\bfallen trees?\\b|\\bhazardous trees?\\b|\\bdangerous trees?\\b|\\bland clearing\\b|\\blot clearing\\b|\\btrim(ming)? (your |the |those )?trees\\b|\\bremov(e|al of|ing) (a |the |your |that |those )?(dead |dangerous |big |large |old |leaning |overgrown )?trees?\\b|\\btrees? (removed|trimmed|cut down|removal)\\b|\\bcut(ting)? down (a |the |your |that |those )?(big |large |dead )?trees?\\b|\\b(limb|branch) removal\\b|\\bcrane (tree|removal)|\\bISA certified|\\btree (and|&) stump",
+    "context": "homeowner|home owner|yard|property|estimate|quote|insured|removal",
+    "exclude": "christmas trees?|family trees?|tree of life|tree ?house|tree stands?|tree huggers?|decision trees?|tree nuts?|shoe trees?|cat trees?|tea tree|money tree|trees? for sale|plant(ing)? (a |your )?trees?|fruit trees?|fast growing trees|tree nursery|\\b(run|own|operate)s? an? (tree|arborist)[^.\\n]{0,60}\\b(crew|company|business|team)\\b|\\b(for|attention) (tree|arborist) (service|care)? ?(contractors?|companies|business(es)?|owners?|pros)\\b|tree (service|care) (business|owners?|marketing|leads|software|franchise opportunit)|grow your tree|now hiring|we'?re hiring|(climbers?|groundsm[ae]n|arborists?|crew members?|foreman) (wanted|needed)|join our (team|crew)|apply today to join|stump grinders? for sale|for sale:? .{0,40}(stump grinder|chipper|bucket truck)|gifts? for (an? |your )?(arborists?|lumberjacks?|tree (guys?|climbers?))|made for arborists|personalized|keepsake|ornament|t-?shirts?|hoodies?|\\bvevor\\b[\\s\\S]*|\\b(gas|cordless|electric|mini|battery) (chainsaws?|pole saws?|pruners?|pruning saws?)\\b|pole saws?|chainsaws? .{0,6}only \\$[\\s\\S]*|tree (removal|service|care|trimming) (companies|company owners|business owners|contractors)\\s*[—–:-]|pay[- ]per[- ]lead|(exclusive|qualified|free|prequalified) (tree (removal|service) )?leads|tree (removal|service) leads|^[\\s\\S]*\\b(tree service lead machine|treelead accelerator|timberline marketing|smart leadz|tree service marketing agency|canopy blue arborist insurance|singleops|arbo space|cornerstone equipment|urgent home leads|theadvert\\.app|lumberjack and woodworker gifts|recruitingbypaycor|now hiring|join our team today|tree service owners|for tree companies|helps tree companies|tree companies (make|struggle|aren.?t short)|booked appointments|recycled leads|estimates booked daily|arborist (business|insurance)|scale your tree)\\b[\\s\\S]*$|^[\\s\\S]*(facebook\\.com\\/marketplace\\/item|\\bCA\\$\\d|windigo solutions|tree service company generate|exclusive on-site estimates|ezarc|reciprocating saw blades?|saw blades?)[\\s\\S]*$|^[\\s\\S]*\\b(greenworks|milwaukee tool|avant tecno|cernitz law|tree launch|growthub|treelaunch\\.net|if your tree service is doing|negocios de tree service|stihl|husqvarna|ego power|dewalt|makita|ryobi)\\b[\\s\\S]*$",
+    "note": "Baseline 2026-09-16. Include is phrase-based on purpose: a bare \\btrees?\\b would pull nurseries (Fast Growing Trees), Christmas-tree lots, ancestry ads and holiday decor. Exclude strips idioms, tree SALES/planting, ads selling TO tree businesses (leads, software, marketing, franchise), equipment-for-sale posts and crew hiring posts — all common in this vertical and none are homeowner lead-gen. Tightened same day after the first 2,114 ads: chainsaw/pole-saw product ads (VEVOR dropship on Gentle Stone Peak x13), arborist gift/apparel ads (ziteeprints, pawpowpet, madroop), and B2B lead sellers pitching tree companies (theadvert.app, Urgent Home Leads) were passing the include. Whole-ad B2B strip (the final ^[\\s\\S]*…$ alternative): relevanceFn tests body+title+page name+url, so a match on a B2B page name or B2B-only phrase blanks the entire text. Added after the full 3,539-ad harvest showed tree-business marketing agencies (Smart Leadz, Tree Service Lead Machine, TreeLead Accelerator, Timberline Marketing, Tree Service Marketing Agency), arborist insurance/software/equipment and crew-hiring ads counted as on-niche. Second pass after the top-50 read: Facebook Marketplace listings from individuals (url facebook.com/marketplace/item, incl. CA$ Canadian posts), saw-blade products (EZARC) and a tree-company marketing agency (Windigo Solutions) were filling price-shock slots; stripped whole-ad."
+  },
+  "analysis": {
+    "keep_dco": false,
+    "angles": [
+      [
+        "gov-relief-program",
+        "relief program|government|state[- ]funded|federal|stimulus|subsid|incentive program|homeowner program|national program|free tree removal program|city program|utility (company )?(will|pays|program)"
+      ],
+      [
+        "eligibility-quiz",
+        "see if you qualify|check (your )?eligibilit|do you qualify|enter (your )?zip|answer (a few|3|three) questions|take the quiz|qualify in|check if you qualify|calculate (your )?(quote|price|cost)|get matched"
+      ],
+      [
+        "price-anchor",
+        "\\$[\\d,]+ ?(to|-|–) ?\\$[\\d,]+|for as low as \\$|starting at \\$|only \\$\\d|\\d+% off|\\$\\d+ off|how much (does|should|will) (it|tree|a tree)|tree removal cost|what (it|tree removal) (really )?costs?|price per tree|flat rate"
+      ],
+      [
+        "anti-overcharge",
+        "overpay|over-?charg|don'?t pay (full|too much)|rip(ped)? off|won'?t tell you|hidden (fee|cost)|inflated|markup|compare (quotes|prices)|get (3|three|multiple) quotes"
+      ],
+      [
+        "scarcity-deadline",
+        "deadline|ends (soon|on|this)|last (chance|round|day)|limited (time|spots|availability)|only \\d+ (spots|openings|slots)|book (now|today) (before|and)|expires|this week only|while (our )?crews? (are|is) in"
+      ],
+      [
+        "storm-insurance",
+        "insurance|storm|hurricane|hail|wind damage|claim|adjuster|carrier|act of god|fell on|after the storm|tornado"
+      ],
+      [
+        "hazard-fear",
+        "fall(ing|s)? on (your |the )?(house|home|roof|car)|crash (through|into)|dangerous|hazard|leaning|dead tree|rott(ing|en)|dying tree|power lines?|foundation|roots? (damage|crack|destroy)|before it falls|widow ?makers?|could (fall|come down)|disease|emerald ash|termites?|liability"
+      ],
+      [
+        "senior-veteran",
+        "senior|veteran|military|retired|over 6[05]|aarp|first responder"
+      ],
+      [
+        "free-estimate",
+        "free (estimate|quote|consultation|assessment|inspection|evaluation)|no (cost|obligation)"
+      ],
+      [
+        "financing",
+        "financing|no money down|0% interest|monthly payment|payment plan|as low as \\$\\d+\\/mo|affordable|budget"
+      ],
+      [
+        "local-proof",
+        "homeowners in|serving|local|neighborhood|county|family[- ]owned|since \\d{4}|\\bBBB\\b|A\\+ rating|\\d+ years (of )?experience|licensed (and|&) insured|fully insured|ISA certified|certified arborist"
+      ],
+      [
+        "contractor-expose",
+        "tree (companies|guys|services) (don'?t|won'?t) want|the ugly truth|what (most )?tree (companies|services)|industry secret|insider|they don'?t tell|uninsured (tree|crews?)|chainsaw guy"
+      ],
+      [
+        "before-after",
+        "before (and|&) after|transformation|curb appeal|sunlight|view|clean ?up|cleaned up|looks (brand )?new"
+      ],
+      [
+        "capability-equipment",
+        "crane|bucket truck|grapple|mulcher|forestry mulching|skid steer|spider lift|tight (spaces|access)|no job too (big|small)|any size|large trees?|big trees?"
+      ],
+      [
+        "emergency-24-7",
+        "24/7|24 hours|emergency|same[- ]day|fast response|right now|tonight|asap"
+      ],
+      [
+        "seasonal",
+        "fall (clean ?up|special)|winter|spring|summer|hurricane season|storm season|before (winter|the storm|storm season)|off[- ]season|dormant season"
+      ],
+      [
+        "listicle-advertorial",
+        "here'?s what|\\d+ (things|ways|reasons|questions|signs)|we compared|guide to|read this|what you need to know|signs (your|a) tree"
+      ]
+    ],
+    "triggers": [
+      [
+        "entitlement",
+        "qualify|eligib|entitled|you may be|approved|program|owed|benefit|free tree removal|covered by"
+      ],
+      [
+        "loss-aversion",
+        "deadline|last chance|miss out|expires|limited|ends|only \\d+|don'?t wait|before it'?s too late|book (now|today)"
+      ],
+      [
+        "suspicion",
+        "overpay|won'?t tell|rip|truth|scam|hidden|secret|full price|uninsured|price gouging"
+      ],
+      [
+        "fear-hazard",
+        "fall(ing|s)? on|crash|dangerous|hazard|leaning|dead|rott|dying|power line|foundation|roots|too late|widow ?maker|disease|liability|damage"
+      ],
+      [
+        "relief-rescue",
+        "no money down|we handle|we take care|no obligation|hassle-?free|clean ?up included|haul (it )?away|stress|peace of mind|done in (a |one )?day"
+      ],
+      [
+        "curiosity",
+        "this helps|here'?s what|wondering|what (most|if)|you won'?t believe|find out|how much"
+      ],
+      [
+        "social-proof",
+        "homeowners (in|are|have)|\\d+\\+? (homeowners|customers|trees|reviews)|reviews|rated|trusted by|BBB|testimonial|5[- ]star"
+      ],
+      [
+        "status-anxiety",
+        "curb appeal|looks|neighbors|ugly|overgrown|eyesore|embarrass|sunlight|view"
+      ],
+      [
+        "insider-edge",
+        "insider|pros use|don'?t want you to know|industry|arborists? (say|recommend)"
+      ]
+    ],
+    "rvert": {
+      "note": "Tree-service device rules (2026-09-16). The built-in price-shock rule needs 'roof|replacement' nearby, so it never fired on '$495 to remove that tree?'. Labels reuse the shared device names so rank.mjs weights apply; two tree-only devices are weighted in aggression_weights.",
+      "bold": "\\bfree tree (removal|trimming)\\b(?!\\s*(estimates?|quotes?))|cover(s)? the full cost|at no cost through|\\$0 out of pocket|no cost to you(?!.{0,20}(estimate|quote))|no out-of-pocket|for (just|only) \\$\\s?\\d",
+      "aggression": [
+        [
+          "/(?<!save |saving |up to |an extra |extra |over |more than )\\$\\s?([1-5]\\d{2}|\\d{2})(\\.\\d\\d)?\\b(?!\\s*(off|discount|savings?|rebate|credit|bonus|value|gift card|per (hour|month)|\\/mo))[^.!?\\n]{0,50}\\b(trees?|stumps?|trim|trimming|removal|remove|grinding|clean ?up)\\b|\\b(trees?|stumps?|trimming|removal|grinding)\\b[^.!?\\n$]{0,40}(?<!save |up to |extra |over )\\$\\s?([1-5]\\d{2}|\\d{2})(\\.\\d\\d)?\\b(?!\\s*(off|discount|savings?|rebate|credit|bonus|value|gift card|per (hour|month)|\\/mo))/i",
+          "price shock"
+        ],
+        [
+          "/most (tree )?(companies|contractors|crews|guys) charge|would charge \\$|i got quoted|(got )?quoted \\$[\\d,]+ for|some tree jobs cost|(is|runs?) like \\$[\\d,]+ usually|useless range|\\$\\s?\\d[\\d,.]*k?\\s*(to|-|–)\\s*\\$\\s?\\d[\\d,.]*k?\\b(?!\\s*off)|\\$\\d+k,? \\$\\d+k,? or/i",
+          "anchor gap named"
+        ],
+        [
+          "/\\b\\d{1,3}\\s*(slots?|spots?|openings?|homes?|jobs?|homeowners?|appointments?)\\s*(left|remain(ing)?|available|needed|only|max)|\\b(only|just)\\s*\\d{1,3}\\s*(slots?|spots?|openings?|homeowners?|jobs?|appointments?|left)|\\b\\d{1,3} free tree (removals?|trimmings?)|offering \\d{1,3} homeowners|first \\d{1,3} (homeowners?|callers?|people|customers)/i",
+          "specific scarcity count"
+        ],
+        [
+          "/\\b(deadline is|ends? (soon|friday|sunday|saturday|tonight|this week)|this week only|before (friday|sunday|midnight)|expires?|after (friday|sunday)|next 24 hours|last chance|book by|until the end of (the )?(week|month))\\b/i",
+          "hard deadline"
+        ],
+        [
+          "/sounds? (impossible|crazy|fake|too good|like a scam)|that.?s crazy|sort of\\W+but not really|i know what you.{0,10}re thinking|i.?ll be honest|i know\\W{1,4}\\$|i get it,? but|everybody wants a price over the phone|i didn.{0,3}t believe it either/i",
+          "objection pre-empt"
+        ],
+        [
+          "/\\b(who actually qualifies|you must be|only for homeowners who|seniors only|if they qualify)\\b|\\bhomeowners (65|60|55)\\s?\\+|\\b(65|60)\\s?\\+ homeowners/i",
+          "qualification as exclusion"
+        ],
+        [
+          "/no middle ?m[ae]n|not a big company|don.?t have (10|ten|fancy|big) offices?|lean and direct|office trucks|low overhead|no showy spend|that.?s how (we|they)|here.?s why:|the price comes from|we (skip|cut out) (all )?the|no showroom|small (family )?crew/i",
+          "reason-why mechanism"
+        ],
+        [
+          "/(claim|apply|book|schedule|call|act|check|lock in|grab)[^.!?\\n]{0,40}before it.{0,3}s too late|\\b(pay(ing)? full price|lose (it|this|out|your (spot|chance)))[^.!?\\n]{0,25}\\b(forever|permanently)\\b|\\bor lose\\b|price goes back up/i",
+          "loss framing on the deadline"
+        ],
+        [
+          "/assistance programs?|cover(s)? the full cost|at no cost through|free tree (removal|trimming) for seniors|senior (assistance|programs?)|programs? (may |will |can )?(pay|cover)|no out-of-pocket|budget-friendly tree removal for seniors|tree removal (work )?for seniors/i",
+          "gov/relief/service benefit framing"
+        ],
+        [
+          "/never falls on a nice day|waits for a storm|through your (roof|car|house|fence)|(already|becomes?) a liability|before it (falls|comes down)|could (fall|come down) (on|through)|crush(es|ed)? (your|a) (car|roof|house)|widow ?makers?|paying for a lot more than tree removal|fall on your (house|home|roof|car)/i",
+          "hazard consequence framing"
+        ]
+      ]
+    },
+    "aggression_weights": {
+      "gov/relief/service benefit framing": 3,
+      "hazard consequence framing": 2
+    }
+  },
+  "classify": {
+    "agg_name": "(find my|request|upgrading|home ?pros|home[- ]improvements?|smart (lifestyle|savers|life)|daily lifestyle|relief program|fetchapro|wallet|money|savers club|quotes?|compare|my home|tree ?pros? near|local tree pros|tree service (finder|near me)|homeowner (hub|help)|services maestro)",
+    "brand_sig": "(isa|certified arborist|licensed|insured|family[- ]owned|since \\d{4}|financing|warranty|free estimate|serving|\\d+ years|crane|bucket truck)",
+    "trade_category": "construction|contractor|landscap|tree|lawn|garden|arborist|home improvement|outdoor"
+  },
+  "tracked_pages": {
+    "note": "No baseline yet. Pages will be discovered on first run (2026-09-16).",
+    "caps": {
+      "tier1": 250,
+      "tier2": 80,
+      "tier3": 0
+    },
+    "pages": []
+  },
+  "watchlist_quiet": {
+    "note": "",
+    "pages": []
+  },
+  "funnel_networks": {
+    "note": "To be populated after first run.",
+    "domains": []
+  }
+}

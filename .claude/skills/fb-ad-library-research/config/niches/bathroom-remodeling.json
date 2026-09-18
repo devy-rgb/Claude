@@ -1,0 +1,107 @@
+{
+  "niche": "bathroom-remodeling",
+  "label": "Bathroom Remodeling / Bath Conversion",
+  "country": "US",
+  "source_sheet": "",
+  "keywords": {
+    "core": [
+      "bathroom remodel",
+      "bathroom renovation",
+      "walk-in shower",
+      "tub to shower conversion",
+      "shower replacement",
+      "bathroom upgrade program",
+      "bath remodel program",
+      "bathroom makeover",
+      "bathroom remodeling program",
+      "affordable bathroom remodel",
+      "bathroom conversion program",
+      "bathroom relief program"
+    ],
+    "angle": [
+      "see if you qualify",
+      "enter zip",
+      "homeowners",
+      "get up to",
+      "must be a US resident",
+      "we're looking for homeowners",
+      "how much you can get",
+      "senior relief",
+      "it actually worked",
+      "bathroom quiz"
+    ],
+    "discovery": [
+      "bathroom",
+      "new bathroom",
+      "bathroom upgrade",
+      "bath remodel",
+      "shower upgrade",
+      "bathtub replacement"
+    ]
+  },
+  "listicle_pages": [
+    "Smart Life",
+    "Wallet Saver",
+    "MONEY",
+    "walletjump"
+  ],
+  "caps": {
+    "per_keyword": 150,
+    "per_page": 400,
+    "discovery_per_keyword": 80
+  },
+  "niche_match": {
+    "include": "\\bbath(room)?s?\\b|\\bshower(s)?\\b|\\btub\\b|\\btub-to-shower\\b|\\bbath remodel|\\bbath conversion|\\bbath renovation|\\bbath upgrade|walk.?in shower",
+    "context": "homeowner|home owner|remodel|renovation|upgrade|home improvement",
+    "exclude": "blood bath|turkey bath|bath bomb|bath salt|bath product|bath toy|bath time",
+    "note": "Baseline not yet run. Pages running roofing + bath together are common — classify by the ad content, not the page."
+  },
+  "tracked_pages": {
+    "note": "No baseline yet. Pages will be discovered on first run. Seed with 'Bath Remodel Specialists' (no pid yet) and cross-niche pages known from roofing.",
+    "caps": {
+      "tier1": 250,
+      "tier2": 80,
+      "tier3": 0
+    },
+    "pages": []
+  },
+  "watchlist_quiet": {
+    "note": "Pages seen in roofing watchlist that also likely run bath ads.",
+    "pages": [
+      {
+        "name": "Bath Remodel Specialists",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "seen in roofing watchlist, no pid yet"
+      },
+      {
+        "name": "Smart Savers Club",
+        "expect": "affiliate",
+        "pid": "239162612619816",
+        "note": "roofing page also runs bath/siding on myhomepros.com"
+      }
+    ]
+  },
+  "funnel_networks": {
+    "note": "To be populated after first run.",
+    "domains": []
+  },
+  "analysis": {
+    "note": "2026-09-13: you redefined 'aggressive' for this niche away from generic pressure-tactics (price shock/deadline/scarcity) toward scam/gray-hat signals specific to this niche's affiliate ecosystem. This REPLACES the shared default aggression device list for bathroom-remodeling only — other niches (roofing, ccw, aca, walk-in-tubs) are unaffected.",
+    "rvert": {
+      "aggression": [
+        ["/\\b(SSA|social security administration)\\b|\\bfederal (program|funding|benefit)s?\\b|\\bgovernment (program|benefit|funding)s?\\b|\\bthe administration (released|announced)\\b|\\bstate program\\b|\\bstimulus\\b|\\bbenefit(s)? (program|service)\\b|\\bentitled to\\b|\\brelief (program|service)\\b|\\bassistance program\\b|\\bsenior (relief|assistance|bathroom (assistance|initiative))\\b|\\bcovered by (the|this)\\b.{0,20}\\bprogram\\b|\\breleased a new program\\b|\\bbenefit(s)? (made specifically for|reserved (exclusively )?for)\\b/i", "gov/relief/service benefit framing"],
+        ["/they (don.?t|won.?t) (want you to|tell you)|these clowns at|little[- ]known (benefit|program|trick|service)|secret (program|benefit|trick|service)|nobody(.?s| is)? talking about|nobody told (you|me|us)|you won.?t believe|it actually worked|before it.?s too late|thank me later|hiding (this|it) from (us|you|seniors|homeowners)|my (mom|grandma|parents|neighbor) (just )?(did it|found out|shared)/i", "scammy/sensational reveal framing"],
+        ["/\\bsee if you qualify\\b|\\b(check|enter|drop in) your zip\\b|\\banswer a few (quick )?questions\\b|\\bcheck (your )?eligibilit(y|ies)\\b|\\bhow much you (can|could) get\\b|\\btap (the button )?below\\b|\\bwithin 30 seconds\\b/i", "affiliate quiz/zip-gate funnel language"],
+        ["/\\$\\s?[4-9],?999\\b(?!\\s*(off|discount))|\\$\\s?[1-2],?999\\b.{0,40}(bathroom|bath|shower|tub|remodel|conversion)|\\b([5-9][0-9]|100)\\s?%\\s*off\\b.{0,40}(install|remodel|bath|shower|tub)|\\$0 out of pocket|no cost to you(?!.{0,20}(estimate|inspection|quote|consultation))/i", "unrealistic price or discount"]
+      ]
+    },
+    "aggression_weights": {
+      "gov/relief/service benefit framing": 3,
+      "scammy/sensational reveal framing": 3,
+      "unrealistic price or discount": 3,
+      "affiliate quiz/zip-gate funnel language": 2,
+      "affiliate/persona page": 2
+    }
+  }
+}

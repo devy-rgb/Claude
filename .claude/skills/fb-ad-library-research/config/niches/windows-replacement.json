@@ -1,0 +1,87 @@
+{
+  "niche": "windows-replacement",
+  "label": "Window Replacement",
+  "country": "US",
+  "source_sheet": "",
+  "keywords": {
+    "core": [
+      "window replacement",
+      "new windows",
+      "energy efficient windows",
+      "window upgrade program",
+      "window replacement program",
+      "replace windows",
+      "window installation program",
+      "affordable window replacement",
+      "window relief program",
+      "windows program",
+      "compare window quotes",
+      "window overpaying"
+    ],
+    "angle": [
+      "see if you qualify",
+      "enter zip",
+      "homeowners",
+      "get up to",
+      "must be a US resident",
+      "we're looking for homeowners",
+      "how much you can get",
+      "lower your energy bills",
+      "it actually worked",
+      "windows quiz"
+    ],
+    "discovery": [
+      "windows",
+      "new windows",
+      "window quote",
+      "window inspection",
+      "window upgrade",
+      "home windows"
+    ]
+  },
+  "listicle_pages": [
+    "Smart Life",
+    "Wallet Saver",
+    "MONEY",
+    "walletjump"
+  ],
+  "caps": {
+    "per_keyword": 150,
+    "per_page": 400,
+    "discovery_per_keyword": 80
+  },
+  "niche_match": {
+    "include": "\\bwindow(s)?\\b|\\bdouble.pane|\\btriple.pane|\\benergy efficient window|\\bAndersen\\b|\\bPella\\b|\\bMilgard\\b|\\bMarvin\\b|\\bwindow (replacement|installation|upgrade)",
+    "context": "homeowner|home owner|replacement|installation|energy|home improvement",
+    "exclude": "browser window|pop-up window|window of opportunity|window shopping|stained glass|windows (7|8|10|11|xp|vista)\\b|microsoft windows|office 365|anti-?virus|cd keys?|premiumcdkeys|windshield|auto glass|car window|truck window|vehicle window|rear window|side window|window breaker|window tint(ing)?|hunting blind|window seat|storefront window",
+    "note": "Baseline run 2026-09-14 surfaced false positives from the bare \\bwindow(s)?\\b include regex: Windows-OS/software ads (PremiumCDKeys), vehicle/auto-glass ads (Next To You Auto Glass, RTG offroad truck trim, Breezer rear-truck-window), and window-covering products (blinds/shutters, e.g. SmartWings, Sun Devil Shutters, MTL Blinds) that are a different vertical from window replacement/installation. Exclude list tightened same day; re-run analyze.mjs against existing raw/ to apply retroactively rather than re-harvesting. 'Find My Local Window Pro' (pid 340511365822233) already known from roofing watchlist."
+  },
+  "tracked_pages": {
+    "note": "Seed with 'Find My Local Window Pro' from roofing watchlist.",
+    "caps": {
+      "tier1": 250,
+      "tier2": 80,
+      "tier3": 0
+    },
+    "pages": [
+      {
+        "pid": "340511365822233",
+        "name": "Find My Local Window Pro",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": null,
+        "library": null,
+        "funnel": null,
+        "source": "roofing-watchlist-2026-09-11"
+      }
+    ]
+  },
+  "watchlist_quiet": {
+    "note": "",
+    "pages": []
+  },
+  "funnel_networks": {
+    "note": "To be populated after first run.",
+    "domains": []
+  }
+}

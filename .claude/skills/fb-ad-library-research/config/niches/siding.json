@@ -1,0 +1,97 @@
+{
+  "niche": "siding",
+  "label": "Siding Replacement / Exterior",
+  "country": "US",
+  "source_sheet": "",
+  "keywords": {
+    "core": [
+      "siding replacement",
+      "vinyl siding",
+      "new siding",
+      "siding program",
+      "siding companies",
+      "fiber cement siding",
+      "siding relief program",
+      "replace siding",
+      "siding upgrade program",
+      "affordable siding",
+      "home exterior program",
+      "exterior siding replacement"
+    ],
+    "angle": [
+      "see if you qualify",
+      "enter zip",
+      "homeowners",
+      "get up to",
+      "must be a US resident",
+      "we're looking for homeowners",
+      "how much you can get",
+      "it actually worked",
+      "siding quiz",
+      "compare siding quotes"
+    ],
+    "discovery": [
+      "siding",
+      "exterior siding",
+      "house siding",
+      "new siding",
+      "siding quote",
+      "siding inspection"
+    ]
+  },
+  "listicle_pages": [
+    "Smart Life",
+    "Wallet Saver",
+    "MONEY",
+    "walletjump"
+  ],
+  "caps": {
+    "per_keyword": 150,
+    "per_page": 400,
+    "discovery_per_keyword": 80
+  },
+  "niche_match": {
+    "include": "\\bsiding\\b|\\bvinyl siding|\\bfiber cement|\\bHardie|\\bHardiplank|\\bLp SmartSide|\\bexterior (panel|cladding|board)|\\bfascia\\b|\\bsoffit\\b",
+    "context": "homeowner|home owner|exterior|home improvement|property|replacement",
+    "exclude": "highway|slide|inside|alongside|upside",
+    "note": "Baseline not yet run. 'Smart Savers Club' (pid 239162612619816) already known to run siding via siding.myhomepros.com — expect to appear in keyword results. 'Element Exteriors' (pid 496685146854650) seen in roofing baseline."
+  },
+  "tracked_pages": {
+    "note": "Seed with cross-niche pages known from roofing baseline that run exterior/siding offers.",
+    "caps": {
+      "tier1": 250,
+      "tier2": 80,
+      "tier3": 0
+    },
+    "pages": [
+      {
+        "pid": "239162612619816",
+        "name": "Smart Savers Club",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": null,
+        "library": null,
+        "funnel": "siding.myhomepros.com",
+        "source": "roofing-baseline-2026-09-11"
+      },
+      {
+        "pid": "496685146854650",
+        "name": "Element Exteriors",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": null,
+        "library": null,
+        "funnel": "elementexteriorspro.org",
+        "source": "roofing-baseline-2026-09-11"
+      }
+    ]
+  },
+  "watchlist_quiet": {
+    "note": "Pages from roofing watchlist likely running siding.",
+    "pages": []
+  },
+  "funnel_networks": {
+    "note": "To be populated after first run.",
+    "domains": []
+  }
+}

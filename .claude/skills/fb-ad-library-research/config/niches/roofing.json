@@ -1,0 +1,874 @@
+{
+  "niche": "roofing",
+  "label": "Roofing / Roof Replacement",
+  "country": "US",
+  "source_sheet": "https://docs.google.com/spreadsheets/d/1Tuen4HAFjGNTmMmmffT_LEs_ycvPkc1ZZA-a-4IvVqI/edit?gid=0#gid=0",
+  "sheet_columns_used": [
+    "Roof Replacement",
+    "Key Words",
+    "Phrase",
+    "Home services"
+  ],
+  "keywords": {
+    "core": [
+      "roof replacement",
+      "roofing",
+      "roofing program",
+      "roof replacement program",
+      "replacement roof",
+      "roof replacement relief",
+      "roof replacement relief program",
+      "fair price roof",
+      "what a roof costs",
+      "compare roof quotes",
+      "roof overpaying",
+      "cost less roof",
+      "roofing companies wont tell",
+      "roof material prices",
+      "roof price area"
+    ],
+    "angle": [
+      "home relief program",
+      "senior relief program",
+      "see if you qualify",
+      "we're looking for homeowners",
+      "how much you can get",
+      "must be a US resident",
+      "enter zip",
+      "get up to",
+      "homeowners",
+      "home owners",
+      "eligible",
+      "roofing quiz",
+      "it actually worked"
+    ],
+    "discovery": [
+      "roof",
+      "new roof",
+      "roof quote",
+      "roof inspection",
+      "storm damage roof",
+      "roof financing"
+    ]
+  },
+  "listicle_pages": [
+    "Smart Life",
+    "Wallet Saver",
+    "MONEY",
+    "walletjump"
+  ],
+  "reference_links": [
+    {
+      "type": "youtube",
+      "name": "myhomepros",
+      "url": "https://www.youtube.com/@MyHomePros/videos"
+    }
+  ],
+  "caps": {
+    "per_keyword": 150,
+    "per_page": 400,
+    "discovery_per_keyword": 80
+  },
+  "niche_match": {
+    "include": "\\broof(s|ing|er|ers)?\\b|\\bre-?roof|\\bshingle|\\battic\\b|\\bsoffit\\b|\\bfascia\\b|\\bgutter|hail damage|storm damage|\\basphalt shingle|metal roof|\\bGAF\\b|owens corning|certainteed",
+    "context": "homeowner|home owner|exterior|home improvement|property",
+    "note": "An ad is on-niche if `include` matches after `exclude` phrases are stripped. Idioms like 'all under one roof' appear in dental/HVAC/moving ads and must not count. Pages in this vertical also run bathroom/window/siding offers; those stay in the page archive but are excluded from roofing angle and hook analysis. Ads selling TO roofing businesses (\"if you run a roofing crew \u2014 custom shirts\") are B2B, not competitors, and are excluded too.",
+    "exclude": "under one roof|all under (the |one )?roof|beneath one roof|\\b(run|own|operate)s? an? roofing[^.\\n]{0,60}\\b(crew|company|business|team)\\b|\\b(for|attention) roofing (contractors?|companies|business owners)\\b"
+  },
+  "tracked_pages": {
+    "note": "Harvested by page ID - no name resolution needed. Tier 1 = full library pull every run; tier 2 = capped pull; tier 3 = keyword coverage only, listed so classification stays cached. Volumes are from the 2026-09-11 baseline; re-tier a page when its volume moves.",
+    "caps": {
+      "tier1": 250,
+      "tier2": 80,
+      "tier3": 0
+    },
+    "pages": [
+      {
+        "pid": "616447448209676",
+        "name": "Find My Roofing Pro",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 172,
+        "library": 179,
+        "funnel": "findmyroofingpro.com",
+        "source": "sheet"
+      },
+      {
+        "pid": "898643390490230",
+        "name": "US Home-Improvements",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 78,
+        "library": 139,
+        "funnel": "home-improvements.work",
+        "source": "sheet"
+      },
+      {
+        "pid": "543157088892050",
+        "name": "Fetchapro",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 57,
+        "library": 250,
+        "funnel": "fetchapro.com",
+        "source": "sheet"
+      },
+      {
+        "pid": "239162612619816",
+        "name": "Smart Savers Club",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 51,
+        "library": 174,
+        "funnel": "siding.myhomepros.com",
+        "source": "sheet"
+      },
+      {
+        "pid": "929423330262512",
+        "name": "Washington Roof Relief Program",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 50,
+        "library": 50,
+        "funnel": "apply.roofreliefprogram.com",
+        "source": "sheet"
+      },
+      {
+        "pid": "1098995136630347",
+        "name": "Javier Home Construction",
+        "bucket_seen": "unclassified",
+        "tier": 1,
+        "niche_ads": 38,
+        "library": 39,
+        "funnel": "roofprosnearme.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "319194415957",
+        "name": "John Beal Roofing",
+        "bucket_seen": "branded",
+        "tier": 1,
+        "niche_ads": 28,
+        "library": 28,
+        "funnel": "gojohnbealroofing.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "151089101411608",
+        "name": "Ruff Roofing",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 18,
+        "library": 18,
+        "funnel": "ruff-roofing.co",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "491372180736840",
+        "name": "Roof Energy Upgrade CA",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 17,
+        "library": 18,
+        "funnel": "fb.me",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "906281839237273",
+        "name": "Philip Crawford",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 16,
+        "library": 16,
+        "funnel": "rt.homeownersavingshub.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "107423471998774",
+        "name": "Sarah Allred",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 15,
+        "library": 15,
+        "funnel": "americanroofers.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "839729879230321",
+        "name": "Monica Shneider",
+        "bucket_seen": "affiliate",
+        "tier": 1,
+        "niche_ads": 15,
+        "library": 15,
+        "funnel": "click.americanprograms.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "730555000139140",
+        "name": "Heartland Exteriors - Twister City",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 13,
+        "library": 19,
+        "funnel": "heartlandexteriors.org",
+        "source": "sheet"
+      },
+      {
+        "pid": "101894725958700",
+        "name": "Home Improvements Today",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 12,
+        "library": 12,
+        "funnel": "homeupgraderesource.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1051540448050226",
+        "name": "Local Home Pros",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 12,
+        "library": 12,
+        "funnel": "localhomeprofessionals.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "991313310732762",
+        "name": "Discount Pro Home",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 12,
+        "library": 12,
+        "funnel": "discountproroofing.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1173364089201038",
+        "name": "Hansons - Get It Done",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 12,
+        "library": 12,
+        "funnel": "usaroofingexperts.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "916443751560734",
+        "name": "Mia Rielle",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 10,
+        "library": 10,
+        "funnel": "click.americanprograms.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1129081453624788",
+        "name": "Evelyn MIA",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 10,
+        "library": 10,
+        "funnel": "trk.trackflowlink.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "471319589403925",
+        "name": "Projecthaven.com",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 10,
+        "library": 10,
+        "funnel": "quote.projecthaven.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1112102415322162",
+        "name": "Roof'd Tulsa",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 10,
+        "library": 10,
+        "funnel": "roofdtulsa.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "543359282194524",
+        "name": "Klaus Roofing Systems of Texas Hill Country ",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 10,
+        "library": 10,
+        "funnel": "krsoftxhillcountry.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "272104989315560",
+        "name": "IC Contracting",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 9,
+        "library": 9,
+        "funnel": "iccontractingwi.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "325100400683128",
+        "name": "Quality Choice Roofing",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 8,
+        "library": 9,
+        "funnel": "qualitychoice-roofing.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1155562097640421",
+        "name": "Home Makeover Experts",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 8,
+        "library": 8,
+        "funnel": "dailyjourney.net",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "104989065304133",
+        "name": "3 Kings Roofing and Construction",
+        "bucket_seen": "unclassified",
+        "tier": 2,
+        "niche_ads": 8,
+        "library": 8,
+        "funnel": "fb.me",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1253758217821163",
+        "name": "Local House Pros",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 8,
+        "library": 8,
+        "funnel": "localhousepros.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "404225779913867",
+        "name": "SCI Roofing and Construction",
+        "bucket_seen": "unclassified",
+        "tier": 2,
+        "niche_ads": 8,
+        "library": 8,
+        "funnel": "getsci.lookatmyroof.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "669442566241712",
+        "name": "Ryan Whitmore",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 7,
+        "library": 7,
+        "funnel": "rt.homeownersavingshub.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "743615208843062",
+        "name": "Evelyn Brooks",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 7,
+        "library": 7,
+        "funnel": "americanroofers.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "675994302273836",
+        "name": "Jack The Roofer",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 7,
+        "library": 7,
+        "funnel": "click.americanprograms.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "772073642658651",
+        "name": "Kevin Mitchell",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 7,
+        "library": 7,
+        "funnel": "m.americanhiddensavings.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "108060005713555",
+        "name": "Domi Roofing",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 7,
+        "library": 7,
+        "funnel": "domiroofing.roofingsuccess.net",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "648438368355119",
+        "name": "Berling Roofing Solutions",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 7,
+        "library": 7,
+        "funnel": "berlingroofingsolutions.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "100633655280867",
+        "name": "Epic Roof Replacement",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 6,
+        "library": 10,
+        "funnel": "satellite.epicroofreplacements.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1284571674744800",
+        "name": "Tristate Roof Replacement Program",
+        "bucket_seen": "unclassified",
+        "tier": 2,
+        "niche_ads": 6,
+        "library": 6,
+        "funnel": "localhousepros.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "805117669349197",
+        "name": "Jennifer White",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 6,
+        "library": 6,
+        "funnel": "click.americanprograms.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "665322316673469",
+        "name": "Sofia Peters",
+        "bucket_seen": "affiliate",
+        "tier": 2,
+        "niche_ads": 6,
+        "library": 6,
+        "funnel": "click.americanprograms.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "846081881911467",
+        "name": "Home Repair Inc.",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 6,
+        "library": 6,
+        "funnel": "homerepair-roofing.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1957946454269984",
+        "name": "SAFG Roofing",
+        "bucket_seen": "branded",
+        "tier": 2,
+        "niche_ads": 6,
+        "library": 6,
+        "funnel": "fb.me",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "496685146854650",
+        "name": "Element Exteriors",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 7,
+        "funnel": "elementexteriorspro.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1061569370650631",
+        "name": "Helm Construction Company",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "fb.me",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "513466165182364",
+        "name": "Roofix",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "roofixhomes.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "100137735609496",
+        "name": "Two Brothers Roofing LLC",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "offer.twobrothersroofing-llc.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1311959311994818",
+        "name": "Andrew Elliott",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "trk.commercialquote.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "827383743791426",
+        "name": "Joe Rivera",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "click.americanprograms.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "240333449507669",
+        "name": "Crown Remodeling",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "crown-remodeling-roof-estimate.roof.builders",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1990335104601666",
+        "name": "RBJ Roofing",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "rbjroofing.bookmyestimate.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1320704297790627",
+        "name": "G&S Exteriors LLC",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "gs-exteriors.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "275621865633859",
+        "name": "Resurrection Roofing",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "fb.resurrectionroofingtx.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1094383007089308",
+        "name": "Starka Home",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 5,
+        "library": 5,
+        "funnel": "starka.roof-upgrade.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "281726408692819",
+        "name": "Andrew Brown",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "path.livewithsavings.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "699297696611371",
+        "name": "Claire Donovan",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "americanroofers.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "122031412532869",
+        "name": "Foam & Roofing Solutions LLC",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "fb.me",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "150022451682396",
+        "name": "Joe Hall Roofing",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "joehallroofing.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "984156501439938",
+        "name": "Rebecca Johns",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "click.americanprograms.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "105287345690091",
+        "name": "Metal Roofing Innovations",
+        "bucket_seen": "unclassified",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "go.metalroofinginnovations.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "603056599883038",
+        "name": "Ultimate Roofing",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "fb.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "447867031752647",
+        "name": "Gavin Lawrence",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "rt.homeownersavingshub.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1066011723272163",
+        "name": "Donna Mitchell",
+        "bucket_seen": "affiliate",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "start.roofingcostsguide.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "120292784494881",
+        "name": "Daily Inspiration Today",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "dailyinspire-today.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "1195685803638251",
+        "name": "Hope Roof Co",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "hoperoofco.org",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "949129658273275",
+        "name": "EcoSmart Construct",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "ecosmartconstruct.com",
+        "source": "discovered-2026-09-11"
+      },
+      {
+        "pid": "692658007266759",
+        "name": "Second Chance Roofs LLC",
+        "bucket_seen": "branded",
+        "tier": 3,
+        "niche_ads": 4,
+        "library": 4,
+        "funnel": "fb.me",
+        "source": "discovered-2026-09-11"
+      }
+    ]
+  },
+  "watchlist_quiet": {
+    "note": "From the source sheet but running no/low roofing volume on 2026-09-11. Re-check by name each run - a quiet page waking up is a finding.",
+    "pages": [
+      {
+        "name": "Smart Lifestyle Trends",
+        "expect": "affiliate",
+        "pid": "296564824269594",
+        "note": "active but only 3 roofing ads this run"
+      },
+      {
+        "name": "Daily Lifestyle Inspiration",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Home Improvements US",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "UpgradingHomes",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Request Home Pros",
+        "expect": "affiliate",
+        "pid": "101300489620663",
+        "note": "active but only 0 roofing ads this run"
+      },
+      {
+        "name": "myhomepros.com",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Made in the USA",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Find My Local Window Pro",
+        "expect": "affiliate",
+        "pid": "340511365822233",
+        "note": "active but only 0 roofing ads this run"
+      },
+      {
+        "name": "Bath Remodel Specialists",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Evelyn Davis",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Clara Whitmore",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Carson Likely",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Annabelle Gutierrez",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Russ Hilton",
+        "expect": "affiliate",
+        "pid": null,
+        "note": "no roofing ads found 2026-09-11"
+      },
+      {
+        "name": "Jim the Home Expert",
+        "expect": "affiliate",
+        "pid": "102396585891649",
+        "note": "active but only 0 roofing ads this run"
+      },
+      {
+        "name": "Olivia Bennett",
+        "expect": "affiliate",
+        "pid": "845344378655821",
+        "note": "active but only 0 roofing ads this run"
+      }
+    ]
+  },
+  "funnel_networks": {
+    "note": "Persona pages feeding a shared funnel. One network's creative appearing on a NEW page is the earliest signal something is working. Track by domain, not by page.",
+    "domains": [
+      {
+        "domain": "click.americanprograms.org",
+        "pages": 12,
+        "signature": "price anchor into ONLY TODAY $1,799"
+      },
+      {
+        "domain": "americanroofers.org",
+        "pages": 6,
+        "signature": "county-name-swapped deadline"
+      },
+      {
+        "domain": "rt.homeownersavingshub.org",
+        "pages": 4,
+        "signature": "Roofs can be crazy expensive, but this helps"
+      },
+      {
+        "domain": "home-improvements.work",
+        "pages": 3,
+        "signature": "ATTENTION HOMEOWNERS free cost estimate"
+      },
+      {
+        "domain": "usaroofingexperts.com",
+        "pages": 3,
+        "signature": "We are looking for 150 homeowners in STATE"
+      },
+      {
+        "domain": "roofprosnearme.com",
+        "pages": 2,
+        "signature": "finally affordable thanks to this new service"
+      },
+      {
+        "domain": "localhousepros.com",
+        "pages": 2,
+        "signature": "$5,995 for a roof?"
+      },
+      {
+        "domain": "dailyinspire-today.com",
+        "pages": 3,
+        "signature": "BBB APPROVED 2026 Roof Replacement Service"
+      }
+    ]
+  }
+}
