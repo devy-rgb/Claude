@@ -55,16 +55,51 @@ const COVERAGE_FLOOR = 5; // pages hit this many+ times in the keyword sweep get
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 function jitter([lo, hi]) { return lo + Math.random() * (hi - lo); }
 
+/* Cloud sandboxes (Claude Code web/remote) route all outbound HTTPS through a
+   local proxy and ship a Chromium build that often sits on a different
+   Playwright revision than whatever `npm install` resolved — the default
+   launch then fails with "Executable doesn't exist". Picked up only when
+   needed; a normal local/macOS setup has neither of these env quirks and
+   launches exactly as before. */
+function findInstalledChromium() {
+  const roots = [process.env.PLAYWRIGHT_BROWSERS_PATH, path.join(os.homedir(), '.cache', 'ms-playwright')].filter(Boolean);
+  for (const root of roots) {
+    if (!fs.existsSync(root)) continue;
+    const dirs = fs.readdirSync(root).filter(d => d.startsWith('chromium-')).sort().reverse();
+    for (const d of dirs) {
+      for (const rel of ['chrome-linux64/chrome', 'chrome-mac/Chromium.app/Contents/MacOS/Chromium', 'chrome-win/chrome.exe']) {
+        const candidate = path.join(root, d, rel);
+        if (fs.existsSync(candidate)) return candidate;
+      }
+    }
+  }
+  return null;
+}
+
+async function launchChromium(profileDir, headless) {
+  const proxyServer = process.env.HTTPS_PROXY || process.env.https_proxy;
+  const opts = {
+    headless,
+    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+    ...(proxyServer ? { proxy: { server: proxyServer } } : {}),
+  };
+  try {
+    return await chromium.launchPersistentContext(profileDir, opts);
+  } catch (err) {
+    if (!/Executable doesn't exist/.test(String(err.message))) throw err;
+    const exe = findInstalledChromium();
+    if (!exe) throw err;
+    return await chromium.launchPersistentContext(profileDir, { ...opts, executablePath: exe });
+  }
+}
+
 async function main() {
   console.log(`→ harvesting "${NICHE}" for ${DATE} (${HEADED ? 'headed' : 'headless'}${SLOW ? ', slow mode' : ''})`);
 
   // A brand-new user-data-dir per run = a brand-new, cookie-free profile.
   // Nothing from a real FB session can leak in, and nothing here persists after.
   const profileDir = fs.mkdtempSync(path.join(os.tmpdir(), 'fb-adlib-'));
-  const browser = await chromium.launchPersistentContext(profileDir, {
-    headless: !HEADED,
-    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
-  });
+  const browser = await launchChromium(profileDir, !HEADED);
   const page = await browser.newPage();
 
   const seedKw = (cfg.keywords?.core || [])[0] || cfg.niche;
