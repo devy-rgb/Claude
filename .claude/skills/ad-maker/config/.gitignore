@@ -1,0 +1,3 @@
+# Adsora Gen secrets and graphs — never commit or ship the filled versions
+adsoragen.env
+adsoragen/*.json

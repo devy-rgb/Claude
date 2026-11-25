@@ -1,0 +1,38 @@
+{
+  "outDir": "./ad-remix-runs/<slug>/05-assets/ugc-yapper",
+  "aspect": "9:16",
+  "quality": "480p",
+  "seed": 20260905,
+  "accent": "",
+  "chain": true,
+  "concurrency": 2,
+  "jobs": [
+    {
+      "name": "clip-1",
+      "mode": "avatar",
+      "image": "./ad-remix-runs/<slug>/05-assets/ugc-yapper/speaker-ref.png",
+      "audio": "./ad-remix-runs/<slug>/05-assets/ugc-yapper/vo/clip-1.wav",
+      "prompt": "Phone-held selfie framing in a bright kitchen, natural hand gestures, slight handheld drift."
+    },
+    {
+      "name": "clip-2",
+      "mode": "avatar",
+      "image": "./ad-remix-runs/<slug>/05-assets/ugc-yapper/speaker-ref.png",
+      "audio": "./ad-remix-runs/<slug>/05-assets/ugc-yapper/vo/clip-2.wav",
+      "prompt": "Same framing, same kitchen; the speaker leans in a little on the key number."
+    },
+    {
+      "name": "broll-1",
+      "mode": "i2v",
+      "image": "./ad-remix-runs/<slug>/05-assets/ugc-yapper/frame-b.png",
+      "prompt": "[Seedance-style prose: one action, motion in every sentence, sound direction inline, no brand names.]",
+      "seconds": 6
+    },
+    {
+      "name": "opener",
+      "mode": "t2v",
+      "prompt": "[Prose for a 5s opener: subject, one action, camera move, light, ambient sound.]",
+      "seconds": 5
+    }
+  ]
+}

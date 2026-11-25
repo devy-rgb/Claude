@@ -1,0 +1,31 @@
+COMPETITOR AD REMIX ENGINE  -  LICENSE
+=====================================
+
+Copyright (c) 2026 @ladprofit. All rights reserved.
+
+YOU MAY
+  - use this Skill for your own personal and business projects, including
+    paid client work and commercial ad production
+  - modify it for your own use
+  - keep your copy for as long as you like
+
+YOU MAY NOT
+  - sell, resell, sublicense, rent, or redistribute this Skill or any
+    substantial part of it (including the production documents in
+    references/house-workflows/)
+  - present it, or a lightly modified version of it, as your own product,
+    template, or course
+
+NO WARRANTY
+  This Skill is provided "as is", with no warranty of any kind, express or
+  implied. The AI image and video services it drives (and any MCP you connect)
+  are third-party tools with their own costs, terms, rate limits, and content
+  rules. Your use of them is between you and them.
+
+YOUR RESPONSIBILITY
+  You are responsible for everything you publish with ads made using this Skill.
+  Any claim, statistic, endorsement, credential, or person depicted must be
+  truthful, substantiated, and lawful in your market. The Skill flags unverified
+  claims and builds original fictional characters, but the final call is yours.
+
+Questions:  @ladprofit

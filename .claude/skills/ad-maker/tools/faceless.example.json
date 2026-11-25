@@ -1,0 +1,30 @@
+{
+  "outDir": "./out",
+  "brollDir": "~/Documents/Adsora/Video Assets Raw/B-Roll/<NICHE>",
+  "hooksDir": "~/Documents/Adsora/Video Assets Raw/Visual hooks/<NICHE>",
+  "musicDir": "~/Documents/Adsora/Video Assets Raw/Soundtracks",
+  "musicVolume": 0.06,
+  "voice": "am_adam",
+  "speed": 1.1,
+  "aspect": "9:16",
+  "python": "~/.adsora/kokoro/bin/python",
+  "chatterboxPython": "~/.adsora/vc-chatterbox/bin/python",
+  "jobs": [
+    {
+      "name": "ad-01",
+      "hook": "opener.mp4",
+      "script": "Your full voiceover script goes here as one string."
+    },
+    {
+      "name": "ad-02",
+      "hook": "other-opener.mp4",
+      "script": "A second script. Name jobs <script>__<hook> to A/B them."
+    },
+    {
+      "name": "ad-03-cloned",
+      "hook": "opener.mp4",
+      "script": "This job clones a specific voice instead of using a Kokoro preset.",
+      "refAudio": "/absolute/path/to/voice-reference.wav"
+    }
+  ]
+}
