@@ -18,7 +18,7 @@
  * A niche config can override weights with `analysis.aggression_weights`;
  * unknown tactic labels (from niche-specific rules) weigh 1.5.
  */
-export const AGGRESSIVE_TOP_N = 50;
+export const AGGRESSIVE_TOP_N = +(process.env.TOP_N || 50);
 /* A reason-why alone (weight 1) is a believability device, not pressure — it pulled a
    lumber supplier and a marketing agency into the roofing list. Need >= one real tactic. */
 export const MIN_AGGRESSIVENESS = 1.5;
