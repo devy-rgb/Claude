@@ -1,0 +1,29 @@
+{
+  "_comment": "Example jobs file for tools/song.mjs — the local song maker (ACE-Step). Copy, edit, run `node tools/song.mjs song.json`. No API key, no per-track cost. See references/song-maker.md.",
+  "outDir": "./05-assets/song",
+  "audioFormat": "mp3",
+  "lmModel": "acestep-5Hz-lm-1.7B",
+  "jobs": [
+    {
+      "name": "cartoon-anthem",
+      "caption": "upbeat pop-punk, bright cartoon energy, gang vocals, huge singalong chorus, handclaps",
+      "lyrics": "[Verse]\nTired of the same old boring day\nThere's a better, brighter way\n[Chorus]\nGrab it now, don't wait around\nBest deal in the whole darn town",
+      "instrumental": false,
+      "duration": 40,
+      "vocalLanguage": "en",
+      "bpm": 150,
+      "seed": 7
+    },
+    {
+      "name": "chill-bed",
+      "caption": "warm lo-fi hip hop instrumental, mellow keys, soft vinyl crackle, no vocals",
+      "instrumental": true,
+      "duration": 30
+    },
+    {
+      "name": "auto-jingle",
+      "sampleQuery": "a 20 second cheerful jingle about fast free shipping, female vocals",
+      "duration": 20
+    }
+  ]
+}

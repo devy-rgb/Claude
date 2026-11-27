@@ -1,0 +1,49 @@
+PERFORMANCE CREATIVE PRODUCER  -  READ ME FIRST
+============================================
+
+WHAT THIS IS
+  A Claude Code Skill. You give it a competitor's winning video ad; it works out
+  why it converts, rebuilds it around YOUR product (new script, new person on
+  screen, same structure), and writes the prompts to produce it in every ad
+  format - or generates the videos for you.
+
+  Full walkthrough: the PDF guide that came with this download.
+  More detail lives in SETUP.md and QUICKSTART.md inside this folder.
+
+WHAT YOU NEED
+  - Claude Code installed (it comes with a paid Claude plan). REQUIRED.
+  - An Evolink API key, in a .env file in the folder you work from. OPTIONAL -
+    without it you still get every prompt, labelled and ready to paste into
+    your own tools. See Part 3 of SETUP.md.
+
+INSTALL  -  pick one
+
+  EASIEST (let Claude do it):
+    1. Open Claude Code.
+    2. Drag this "ad-maker" folder into the chat window.
+    3. Type:   install the skill in this folder
+    4. Approve it when asked.
+
+  MANUAL:
+    Move this whole "ad-maker" folder into:
+      Windows:  C:\Users\YOUR-NAME\.claude\skills\
+      Mac:      ~/.claude/skills/
+                (the .claude folder is hidden - in Finder press Cmd+Shift+G
+                 and paste  ~/.claude/skills/  then press Enter)
+    Create the "skills" folder if it is not there.
+
+THEN
+  1. Fully quit Claude Code and reopen it.
+  2. Type:   list my skills
+     You should see  ad-maker  in the list.
+  3. Open a folder where you want to keep your ad work, and type:
+        remix this competitor ad
+
+TROUBLESHOOTING
+  See Section 7 of the PDF guide, or the Troubleshooting part of SETUP.md.
+
+LICENSE
+  Free for your own personal and business use. Do not resell or redistribute.
+  See LICENSE.txt.
+
+  - @ladprofit

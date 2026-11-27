@@ -1,0 +1,294 @@
+{
+  "_comment": "Copy this file to generators.json and edit if needed. If generators.json is absent, the engine still uses these defaults (Evolink HTTP API). Set default_adapter to 'prompt-only' to never generate. See references/generation-adapters.md.",
+  "default_adapter": "evolink",
+  "budget_usd": 5.0,
+  "quote_before_run": true,
+  "draft_first": true,
+  "routing": {
+    "_comment": "Per-format overrides on top of default_adapter. A format listed here goes to the named adapter when that adapter is configured; otherwise it falls back and the engine says so in the quote — it never silently skips a format.",
+    "face_ugc_formats": [
+      "ugc-yapper",
+      "talking-head",
+      "in-car-ugc",
+      "ugc-tiktok-comment",
+      "ugc-dialog",
+      "podcast-duo"
+    ],
+    "face_ugc_adapter": "adsoragen",
+    "face_ugc_fallback": "evolink",
+    "podcast_note": "podcast-duo defaults to Adsora Gen too, not Seedance. It is a two-person talking format: build it as alternating i2v clips (one speaker per clip, from that speaker's still) with H3's own native audio — NOT `avatar` mux, and split any long single-speaker beat into a chain (references/talking-head-long-form.md). Evolink Seedance is only the fallback when `node tools/adsoragen.mjs --health` is not LIVE, and the quote must say so. See references/adsoragen-video.md and references/formats/podcast-duo.md.",
+    "faceless_formats": [
+      "faceless-vo-broll"
+    ],
+    "faceless_tool": "tools/faceless.mjs",
+    "faceless_voice": "am_adam",
+    "faceless_voice_speed": 1.1,
+    "faceless_voice_female": "af_sarah",
+    "faceless_voice_female_speed": 1.2,
+    "faceless_voice_note": "House Kokoro preset for faceless ads (measured ~185 wpm). A faceless ad has no avatar clip to clone from, so it never clones unless the user supplies a refAudio; cloning is for avatar-led formats only. See references/house-defaults.md.",
+    "broll_pool_tool": "tools/broll-pool.mjs",
+    "broll_pool_note": "Screen every b-roll folder once (contact sheet, drop watermarked/text/logo clips) into broll-pool.json and point renders at it (brollPool). Cutaways are seeded by the script line so the same line draws the same footage in every variant.",
+    "_avatar_comment": "Avatar-led ads (an on-camera generated person delivering hook+CTA over B-roll). The on-camera 'avatar clip' uses the BEST Seedance model, not the fast one; the voice is cloned from the avatar's own generated audio and reused for all B-roll VO. See references/formats/talking-head.md 'AVATAR-LED AD DEFAULTS'.",
+    "avatar_formats": [
+      "talking-head",
+      "ugc-yapper",
+      "podcast-duo",
+      "hot-seat-crowd-qa",
+      "expert-caught-in-moment"
+    ],
+    "avatar_clip_model": "seedance-2.0-image-to-video",
+    "avatar_clip_model_fallback": "seedance-2.0-fast-image-to-video",
+    "avatar_clip_len_sec": [
+      5,
+      15
+    ],
+    "avatar_broll_model": "seedance-2.0-fast-image-to-video",
+    "avatar_voice": "clone-from-avatar",
+    "avatar_voice_engine": "chatterbox",
+    "avatar_voice_fallback": "kokoro",
+    "avatar_override_note": "Use avatar_clip_model and Chatterbox cloning UNLESS the user explicitly asks for another model/voice engine.",
+    "vo_formats": [
+      "moving-bg-vo-text"
+    ],
+    "vo_tool": "tools/faceless.mjs --vo-only",
+    "text_first_formats": [
+      "wall-of-text-music",
+      "dance-big-text",
+      "moving-bg-vo-text"
+    ],
+    "card_tool": "tools/card.mjs",
+    "song_formats": [
+      "cartoon-music-video"
+    ],
+    "song_maker": {
+      "tool": "tools/song.mjs",
+      "engine": "ace-step-1.5",
+      "_comment": "Local music/song generator (ACE-Step 1.5). No API, no key, no per-track cost (GPU time only); MLX on Apple Silicon, CUDA/CPU elsewhere. Makes songs with vocals, jingles, or instrumental beds. Used by the cartoon-music-video format (the song IS the ad) and as a fallback bed when nothing in the Soundtracks pool fits (hard rule 20). A locally generated track is yours, so it clears edit-assembly.md §9. NOT bundled with the skill (weights are ~10GB) — install ACE-Step once. Full procedure: references/song-maker.md.",
+      "install": "git clone https://github.com/ACE-Step/ACE-Step-1.5.git ~/.adsora/ace-step && cd ~/.adsora/ace-step && uv sync",
+      "home_env": "ACESTEP_HOME",
+      "home_search": [
+        "$ACESTEP_HOME",
+        "~/.adsora/ace-step",
+        "~/ACE-Step-1.5",
+        "~/Documents/Adsora/ACE-Step-1.5",
+        "./ACE-Step-1.5"
+      ],
+      "connect_note": "Install ACE-Step once (see install). Model weights (~10GB) auto-download on first run, then it is offline. `node tools/song.mjs --health` reports whether it is found and ready. If absent, nothing breaks: a bed falls back to the Soundtracks pool and cartoon-music-video degrades to prompt-only (lyrics + a note to generate the song).",
+      "commands": {
+        "health": "node tools/song.mjs --health",
+        "plan": "node tools/song.mjs <jobs>.json --plan",
+        "generate": "node tools/song.mjs <jobs>.json",
+        "jobs_template": "tools/song.example.json"
+      },
+      "lm_models": {
+        "light": "acestep-5Hz-lm-0.6B",
+        "recommended": "acestep-5Hz-lm-1.7B",
+        "max": "acestep-5Hz-lm-4B"
+      },
+      "defaults": {
+        "audio_format": "mp3",
+        "lm_model": "acestep-5Hz-lm-1.7B",
+        "duration_sec": "auto from lyrics unless set"
+      },
+      "cost": "0.00 (local; GPU time only)"
+    }
+  },
+  "hands_off": {
+    "_comment": "Used when the user kicks off with 'run it hands-off' / 'on autopilot' / 'from my phone'. The pipeline still hard-stops once for the script + avatar approval; everything after that one tap runs automatically.",
+    "trigger_phrases": [
+      "hands-off",
+      "on autopilot",
+      "from my phone",
+      "just run it"
+    ],
+    "default_formats": [
+      "ugc-yapper",
+      "podcast-duo",
+      "whiteboard-marker-explainer",
+      "simpsons-flat-2d"
+    ],
+    "auto_generate": true,
+    "budget_preapproved_usd": 5.0,
+    "max_auto_jobs": 12,
+    "notify": true
+  },
+  "adapters": {
+    "evolink": {
+      "kind": "evolink-style",
+      "base_url": "https://api.evolink.ai/v1",
+      "env_key": "EVOLINK_API_KEY",
+      "env_base_url": "EVOLINK_BASE_URL",
+      "connect_note": "No MCP and no OAuth. Put EVOLINK_API_KEY in the .env of the folder you run from (and EVOLINK_BASE_URL if you want to override the default; it must end in /v1). Media generation is api.evolink.ai — the text/chat host direct.evolink.ai is a different service and is not used here.",
+      "async": true,
+      "submit": {
+        "image": "POST /images/generations",
+        "video": "POST /videos/generations"
+      },
+      "poll": "GET /tasks/{id}",
+      "poll_image_alt": "GET /images/generations/{id}",
+      "models": {
+        "image_from_scratch": "gpt-image-2",
+        "image_from_reference": "gpt-image-2",
+        "image_hyperreal": "nano-banana-2-beta",
+        "image_fast": "nano-banana-2-lite",
+        "video_text": "seedance-2.0-fast-text-to-video",
+        "video_text_best": "seedance-2.0-text-to-video",
+        "video_image": "seedance-2.0-fast-image-to-video",
+        "video_image_best": "seedance-2.0-image-to-video",
+        "video_long_text": "seedance-2.5-text-to-video",
+        "video_long_image": "seedance-2.5-image-to-video"
+      },
+      "capabilities": {
+        "image": [
+          "text-to-image",
+          "image-to-image",
+          "masked-edit (gpt-image-2 only)"
+        ],
+        "video": [
+          "text-to-video",
+          "image-to-video",
+          "native-audio"
+        ],
+        "motion_presets": false
+      },
+      "defaults": {
+        "image_size": "9:16",
+        "video_quality": "480p",
+        "video_duration_sec": 5,
+        "generate_audio": true
+      },
+      "field_names": {
+        "_comment": "Evolink IGNORES unknown body keys instead of rejecting them, so a near-miss field name is billed and quietly wrong rather than erroring. These exact names matter.",
+        "image_aspect": "size",
+        "video_aspect": "aspect_ratio",
+        "reference_images": "image_urls",
+        "inpaint_mask": "mask_url",
+        "voiceover": "audio_urls"
+      }
+    },
+    "adsoragen": {
+      "kind": "adsoragen-style",
+      "tool": "tools/adsoragen.mjs",
+      "_comment": "Our own MiniMax H3 weights on our own RunPod GPU, driven by tools/adsoragen.mjs. Face-to-camera UGC routes here (routing.face_ugc_formats) whenever `node tools/adsoragen.mjs --health` says LIVE. Keys live in the skill's own config/adsoragen.env (env_file), the four ComfyUI graphs in config/adsoragen/ (graph_dir). Not billed per clip — it costs GPU seconds (executionTime × RUNPOD_GPU_HOURLY). Always driven by API from this machine with every clip saved to the run folder; never generated in the web app / browser. Full procedure: references/adsoragen-video.md.",
+      "env_file": "config/adsoragen.env",
+      "env_file_example": "config/adsoragen.env.example",
+      "graph_dir": "config/adsoragen",
+      "graphs": {
+        "t2v": "h3-t2v.json",
+        "i2v": "h3-i2v.json",
+        "s2v": "h3-s2v.json",
+        "s2vchain": "h3-s2v-chain.json (optional; falls back to s2v)"
+      },
+      "graph_env": {
+        "t2v": "ADSORA_WORKFLOW_H3_T2V",
+        "i2v": "ADSORA_WORKFLOW_H3_I2V",
+        "s2v": "ADSORA_WORKFLOW_H3",
+        "s2vchain": "ADSORA_WORKFLOW_H3_CHAIN"
+      },
+      "base_url": "https://api.runpod.ai/v2/{endpoint_id}",
+      "env_key": "RUNPOD_API_KEY",
+      "env_endpoint_id": "RUNPOD_VIDEO_ENDPOINT_ID",
+      "env_endpoint_id_2": "RUNPOD_VIDEO_ENDPOINT_ID_2",
+      "env_endpoint_id_3": "RUNPOD_VIDEO_ENDPOINT_ID_3",
+      "optional_env": [
+        "RUNPOD_VIDEO_ENDPOINT_ID_2",
+        "RUNPOD_VIDEO_ENDPOINT_ID_3",
+        "RUNPOD_GPU_HOURLY",
+        "RUNPOD_S2V_STEPS",
+        "RUNPOD_VIDEO_STEPS",
+        "RUNPOD_VIDEO_ETA_SEC"
+      ],
+      "required_env": [
+        "RUNPOD_API_KEY",
+        "RUNPOD_VIDEO_ENDPOINT_ID"
+      ],
+      "known_endpoints": {
+        "7ud39rwzgljmtj": "adsora-gen — primary. US-NC-1, network volume q00nagvebo (H3 weights + runtime/boot.sh), min 0 / max 2 workers, 90s idle. Answered /health 2026-09-04.",
+        "t5adchw32irgan": "answered /health 2026-09-04; role unconfirmed — check the RunPod console before using as a fallback",
+        "b497kbskl1yduu": "answered /health 2026-09-04; role unconfirmed — check the RunPod console before using as a fallback"
+      },
+      "connect_note": "Keys live in the skill's own config/adsoragen.env (cp config/adsoragen.env.example config/adsoragen.env). Fill by hand from the RunPod console, or in your own terminal: `cd ~/Documents/webchat-vercel && vercel env pull /tmp/adsora-prod.env --environment=production && node tools/adsoragen.mjs --import-env /tmp/adsora-prod.env && rm /tmp/adsora-prod.env` — that fills the key file and config/adsoragen/*.json. `node tools/adsoragen.mjs --health` names anything missing. If anything required is missing, face UGC falls back to routing.face_ugc_fallback and the quote says so. The filled key file never ships in the distributable copy.",
+      "commands": {
+        "health": "node tools/adsoragen.mjs --health",
+        "quote": "node tools/adsoragen.mjs 05-assets/<format>/adsoragen.json --plan",
+        "generate": "node tools/adsoragen.mjs 05-assets/<format>/adsoragen.json",
+        "cancel": "node tools/adsoragen.mjs --cancel runpod:<endpointId>:<jobId>",
+        "import_keys": "node tools/adsoragen.mjs --import-env <pulled.env>",
+        "jobs_template": "tools/adsoragen.example.json"
+      },
+      "api": {
+        "submit": "POST /run  {input:{workflow, images:[{name, image:<data url>}]}}",
+        "poll": "GET /status/{id}",
+        "cancel": "POST /cancel/{id}",
+        "health": "GET /health"
+      },
+      "job_id_prefix": "runpod:<endpointId>:",
+      "models": {
+        "video_text": "adsora-gen-2.0 (jobs-file mode t2v)",
+        "video_image": "adsora-gen-2.0-i2v (mode i2v)",
+        "avatar_lipsync": "adsora-avatar-2.0 (mode avatar: reference portrait + the voice WAV; our voice muxed back over H3's picture)"
+      },
+      "capabilities": {
+        "image": [],
+        "video": [
+          "text-to-video",
+          "image-to-video",
+          "talking-avatar-lipsync",
+          "native-audio"
+        ],
+        "motion_presets": false
+      },
+      "defaults": {
+        "video_quality": "480p",
+        "dims": {
+          "480p": "480x832",
+          "720p": "704x1280"
+        },
+        "fps": 24,
+        "frame_grid": "17k+5, 124..362 frames (5.2..15.08s); the tool snaps up",
+        "video_duration_sec": 5,
+        "max_clip_sec": 15.08,
+        "max_speech_sec_per_avatar_clip": 14.7,
+        "steps": 16,
+        "seed": "one per run, shared by chained clips",
+        "voice_mux": true,
+        "poll_timeout_min": 25
+      },
+      "cost": {
+        "measured_2026_08_10": {
+          "5.17s_480p_avatar": 0.114,
+          "5.17s_480p_t2v": 0.101,
+          "15.08s_480p_avatar": 0.553
+        },
+        "estimate": "0.11 × (seconds/5.17)^1.47 at 480p, ×2 at 720p (superlinear; prefer several short clips)",
+        "real": "executionTime_ms / 3.6e6 × RUNPOD_GPU_HOURLY (default 3.49, the top of the expensive-first pool)"
+      },
+      "rates_usd_per_second": {
+        "480p": 0.022,
+        "720p": 0.044
+      }
+    },
+    "fal": {
+      "kind": "fal-style",
+      "mcp_tool_prefixes": [
+        "mcp__fal",
+        "mcp__fal-ai",
+        "mcp__falai"
+      ],
+      "cli_fallback": "fal",
+      "env_key": "FAL_KEY",
+      "endpoints": {
+        "image_from_scratch": "fal-ai/gpt-image-2",
+        "image_from_reference": "fal-ai/gpt-image-2/edit",
+        "image_hyperreal": "fal-ai/nano-banana-pro",
+        "video_cheap_motion": "fal-ai/kling-video/v2.5-turbo/pro/image-to-video",
+        "video_native_audio": "bytedance/seedance-2.0/image-to-video",
+        "video_text": "bytedance/seedance-2.0/text-to-video"
+      },
+      "defaults": {
+        "image_quality": "medium",
+        "video_resolution": "480p"
+      }
+    }
+  }
+}

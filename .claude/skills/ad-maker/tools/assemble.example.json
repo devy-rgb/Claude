@@ -1,0 +1,148 @@
+{
+  "outDir": "./ad-remix-runs/<slug>/06-finals/talking-head",
+  "aspect": "9:16",
+  "fps": 24,
+  "font": "Arial Black",
+  "captions": {
+    "style": "karaoke",
+    "wordsPerCue": 3,
+    "y": 0.8,
+    "highlight": "#FFE600"
+  },
+  "banner": {
+    "lines": [
+      "[BRAND]",
+      "[OFFER] = $[PRICE]"
+    ],
+    "y": 0.42,
+    "box": "#D32F2F"
+  },
+  "disclosure": false,
+  "endCard": {
+    "lines": [
+      "Comment [WORD]",
+      "for how it works"
+    ],
+    "seconds": 3
+  },
+  "musicVolume": 0.06,
+  "jobs": [
+    {
+      "name": "talking-head-final",
+      "clips": [
+        {
+          "file": "./ad-remix-runs/<slug>/05-assets/talking-head/final/clip-1.mp4",
+          "script": "The exact words spoken in this clip, as written in 03-rebuild.md."
+        },
+        {
+          "file": "./ad-remix-runs/<slug>/05-assets/talking-head/final/clip-2.mp4",
+          "script": "The proof list, spoken over jobsite footage.",
+          "broll": {
+            "dir": "/absolute/path/to/b-roll",
+            "from": 0.8,
+            "to": -1.2,
+            "hold": 2.4
+          }
+        },
+        {
+          "file": "./ad-remix-runs/<slug>/05-assets/talking-head/final/clip-3.mp4",
+          "script": "The value reframe, back on the face for the last sentence.",
+          "zoom": 1.08,
+          "cutaways": [
+            {
+              "file": "/absolute/path/to/finished-room.mp4",
+              "at": 1.0,
+              "seconds": 2.2
+            }
+          ]
+        },
+        {
+          "file": "./ad-remix-runs/<slug>/05-assets/talking-head/final/clip-4.mp4",
+          "script": "The CTA, with a repaired voice line laid over the room tone.",
+          "audio": "./ad-remix-runs/<slug>/05-assets/repairs/clip-4-elevenlabs.wav",
+          "ambience": 0.15
+        },
+        {
+          "file": "./ad-remix-runs/<slug>/05-assets/talking-head/product.png",
+          "seconds": 2,
+          "overlays": [
+            {
+              "file": "./ad-remix-runs/<slug>/05-assets/label.png",
+              "x": 120,
+              "y": 640,
+              "w": 480
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "talking-head-final__hook-2",
+      "banner": false,
+      "endCard": false,
+      "clips": [
+        {
+          "file": "./ad-remix-runs/<slug>/05-assets/talking-head/final/clip-1-hook2.mp4",
+          "script": "The second hook."
+        },
+        {
+          "file": "./ad-remix-runs/<slug>/05-assets/talking-head/final/clip-2.mp4",
+          "script": "The proof list."
+        }
+      ]
+    },
+    {
+      "name": "wall-of-text__hook-1",
+      "captions": false,
+      "disclosure": false,
+      "banner": false,
+      "endCard": false,
+      "musicDir": "/absolute/path/to/cleared-music",
+      "musicVolume": 0.18,
+      "clips": [
+        {
+          "file": "/absolute/path/to/slow-aerial.mp4",
+          "loop": true,
+          "seconds": 10,
+          "mute": true,
+          "dim": 0.5,
+          "blur": 4,
+          "text": [
+            {
+              "text": "I made $169k a year\nbut felt trapped.\n\nMy buddy who owns\n3 Airbnbs told me:\n\n\"Stop wasting time\non Zillow.\nSubscribe to [BRAND].\nThey send you the\ndeals worth buying.\"\n\nSo I did.\n\n9 months later, my\nSTR cashflow covers\nmy mortgage...\nand paid for a family\ntrip to Italy.\n\nCheck out [BRAND].\n100% free.",
+              "anchor": "middle",
+              "fill": 0.8,
+              "outline": 4,
+              "shadow": 2,
+              "font": "Gotham Black"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "moving-bg__hook-1",
+      "disclosure": false,
+      "banner": false,
+      "endCard": false,
+      "music": false,
+      "captions": {
+        "style": "plain",
+        "wordsPerCue": 2,
+        "y": 0.52,
+        "size": 44,
+        "uppercase": false
+      },
+      "clips": [
+        {
+          "file": "./ad-remix-runs/<slug>/05-assets/moving-bg-vo-text/background.mp4",
+          "loop": true,
+          "mute": true,
+          "audio": "./ad-remix-runs/<slug>/05-assets/moving-bg-vo-text/vo__hook-1.wav",
+          "tail": 0.6,
+          "script": "The full spoken script, verbatim — captions are the written words, timed by the heard ones."
+        }
+      ]
+    }
+  ]
+}
